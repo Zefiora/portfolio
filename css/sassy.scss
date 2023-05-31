@@ -1,0 +1,146 @@
+/*define variables for colors */
+$prime_1: #F6F1F1;
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+  }
+  .grid-item {
+     width: 60%;
+     height: auto;
+  }
+  .grid-container2 {
+    display: grid;
+    grid-template-columns: 320px 450px 350px ;
+    grid-template-rows: 1fr;
+  }
+  .grid-item2 {
+    width: auto;
+    height: auto;
+    border-width: px25;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    background-color: #191825;
+    color: #F6F1F1;
+    margin: 5px;
+  }
+  .tbl{
+    border-width: px25;
+    border-color: black;
+    border-style: solid;
+    width: 900px;
+    border-collapse: collapse;
+    margin: 6px;
+  }
+  .contactme{
+    background-color: #191825;
+    color: #F6F1F1;
+    width: auto;  
+    height: auto;
+    border-width: px25;
+    border-color: black;
+    border-style: solid;
+    margin: 5px;
+  }
+  *{
+    box-sizing: border-box;
+    padding-top: 2px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    font-family: 'Roboto', sans-serif;
+    overflow: top !important;
+  }
+  a {
+    text-decoration : none !important;
+    color:#F6F1F1 !important;
+  }
+  h4{
+    text-align: center;
+  }
+  .topbox {
+    width: 1px;
+    height: 150px;
+    background-color: #141000;
+    position: relative;
+    animation-name: topboxz;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    border-width: px200 px25;
+    border-color: black;
+    border-style: solid;
+    animation-delay: .3s;
+    color: black;
+    font-size: 5px;
+    text-align: Center;
+  }
+  @media (prefers-reduced-motion) {
+    .topbox {
+      background-color: #141000;
+      left:0px; 
+      width: 1100px; 
+      color: #F6F1F1; 
+      font-size: 60px; 
+   }
+  }
+  @keyframes topboxz {
+    from {
+      background-color: black; 
+      left:0px; 
+      top:0px;
+      height: 90px;
+    }   
+    to {
+      background-color: #141000;
+      left:0px; 
+      width: 1100px; 
+      height: 90px;
+      color:#F6F1F1; 
+      font-size: 60px;
+    } 
+  }
+  .navbar{
+    background-color:#191825;
+    width: 1110px;
+    height: 60px;
+    border-width: px25;
+    border-color: black;
+    border-style: solid;
+    color:#F6F1F1;
+    margin: 5px;
+  }
+  .dropdown-item {
+    background-color: black !important;
+    color:#F6F1F1;
+  }
+  .dropdown-menu {
+    background-color: black !important;
+  }
+  .dropdown-divider {
+    background-color: #F6F1F1 !important;
+  }
+  
+  @media only screen and (max-width: 1100px) {
+  .grid-container2 {
+    display: grid;
+    grid-template-columns: 100% ;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+    .navbar {
+      width: 100%;
+      position: relative;
+      z-index: 1 !important;
+    }
+    .tbl {
+     width: 100%;
+     position: relative;
+     z-index: 0 !important;
+    }
+    .topbox {
+     width: 100% !important;
+     font-size: 30px !important;
+    }
+  }
