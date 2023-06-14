@@ -216,7 +216,6 @@ function learnaskill(skillid) {
         for (let i = 0; i < skilllist.length; i++) {
             let matchskill = skilllist[i].skillid;
             if (matchskill == pickskill) {
-                //if (skilllist[i].reqlevel <= Skilllevel) {
                 if (skilllist[i].Int <= IntStat) {
                     if (skilllist[i].Wis <= WisStat) {
                         if (skilllist[i].Con <= ConStat) {
