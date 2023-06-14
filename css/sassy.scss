@@ -1,11 +1,137 @@
 /*define variables for colors */
+@import url(https://fonts.googleapis.com/css?family=Play);
 $prime_1: #F6F1F1;
+$prime_2: #191825;
 
+body {
+  background-color:#141000 !important; 
+}
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     place-items: center;
+  }
+  /*Character title*/
+  .charactername{
+    display: grid;
+    grid-template-columns: 290px 50px 200px 120px 200px;
+    grid-template-rows: 1fr;
+    text-align: center;
+  }
+  .lvl {
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -220%);
+  }
+  .nameandlevel {
+    position: relative;
+    top: 10%;
+  }
+  .mattclass {
+    position: relative;
+    top: 10%;
+  }
+  .bio {
+    font-style: italic;
+    font-size: 13px;
+    background-color: #141000;
+    border-color: black;
+    border-style: solid;
+    margin-top: 195px;
+  }
+  /*End Character and Bio*/
+  /* Attribute Values */
+  .availableattributes {
+    display: grid;
+    grid-template-columns: 200px 50px;
+    place-items: center;
+    grid-gap: 1px;
+    padding-left: 30px;
+    text-align: center;
+  }
+  .attributepoints {
+    display: grid;
+    grid-template-columns: 200px 520px;
+    grid-template-rows: 100px;
+    place-items: center;
+    grid-gap: 150px;
+    padding-left: 30px;
+    text-align: center;
+  }
+  .attr {
+    background-color: black;
+  }
+  .attrvalue:hover {
+    background-color: orange;
+    font-weight: bold;
+  }
+  .attrvalue {
+    background-color: white;
+    color: black;
+  }
+  .attributelist {
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px;
+    place-items: center;
+    grid-gap: 15px;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .attributeitem {
+    width: 50px;
+    height: 50px;
+    border-width: 1px;
+    border-color: $prime_1;
+    border-style: solid;
+    text-align: center;
+  }
+  /* End Attribute Values */
+  /* Skill Tree */
+//Main Container for skills
+#skillscontainer {
+  display: grid;
+  grid-template-columns: 550px 550px;
+  grid-template-rows: 400px;
+}
+#skilltreecontainer{
+  display: grid;
+  grid-template-columns: 260px;
+  grid-template-rows: 100px  50px;
+}
+.skillpoints {
+  display: grid;
+  grid-template-columns: 300px 150px;
+  grid-template-rows: 185px;
+}
+#acquiredskillscontainer {
+  display: grid;
+  grid-template-columns: 260px;
+  grid-template-rows: 100px  50px;
+}
+.skilltree {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px 50px 50px;
+  place-items: center;
+  grid-gap: 10px;
+}
+.skillitem {
+  width: 55px;
+  height: 55px;
+  border-width: 1px;
+  border-color: #3d3d3d;
+  border-style: solid;
+  margin: 1px;
+  text-align: center;
+  place-items: center;
+}
+/* End Skill Tree */
+  td {
+    background-color: $prime_2;
   }
   .grid-item {
      width: 60%;
@@ -16,6 +142,12 @@ $prime_1: #F6F1F1;
     grid-template-columns: 320px 450px 350px ;
     grid-template-rows: 1fr;
   }
+  .Desc {
+    font-size: 10px;
+    font-style: italic;
+    width: 200px;
+    text-align: center;
+  }
   .grid-item2 {
     width: auto;
     height: auto;
@@ -23,9 +155,19 @@ $prime_1: #F6F1F1;
     border-color: black;
     border-style: solid;
     text-align: center;
-    background-color: #191825;
-    color: #F6F1F1;
+    background-color: $prime_2;
+    color: $prime_1;
     margin: 5px;
+  }
+ .options {
+    color: $prime_1;
+    background-color: #191825;
+  }
+  .classes {
+    color: $prime_1;
+    background-color: #191825;
+    position: relative;
+    height: 50%;
   }
   .tbl{
     border-width: px25;
@@ -37,7 +179,7 @@ $prime_1: #F6F1F1;
   }
   .contactme{
     background-color: #191825;
-    color: #F6F1F1;
+    color: $prime_1;
     width: auto;  
     height: auto;
     border-width: px25;
@@ -51,56 +193,37 @@ $prime_1: #F6F1F1;
     padding-right: 2px;
     padding-bottom: 2px;
     padding-left: 2px;
-    font-family: 'Roboto', sans-serif;
+    font-family: Play;
     overflow: top !important;
+    color: $prime_1;
   }
   a {
     text-decoration : none !important;
-    color:#F6F1F1 !important;
+    color:$prime_1 !important;
   }
   h4{
     text-align: center;
+  }
+  p span {
+    display: block;
   }
   .topbox {
     width: 1px;
     height: 150px;
     background-color: #141000;
     position: relative;
-    animation-name: topboxz;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
     border-width: px200 px25;
     border-color: black;
     border-style: solid;
-    animation-delay: .3s;
     color: black;
     font-size: 5px;
     text-align: Center;
-  }
-  @media (prefers-reduced-motion) {
-    .topbox {
-      background-color: #141000;
-      left:0px; 
-      width: 1100px; 
-      color: #F6F1F1; 
-      font-size: 60px; 
-   }
-  }
-  @keyframes topboxz {
-    from {
-      background-color: black; 
-      left:0px; 
-      top:0px;
-      height: 90px;
-    }   
-    to {
-      background-color: #141000;
-      left:0px; 
-      width: 1100px; 
-      height: 90px;
-      color:#F6F1F1; 
-      font-size: 60px;
-    } 
+    background-color: #141000;
+    left:0px; 
+    width: 1100px; 
+    height: 90px;
+    color:$prime_1; 
+    font-size: 60px;
   }
   .navbar{
     background-color:#191825;
@@ -109,38 +232,812 @@ $prime_1: #F6F1F1;
     border-width: px25;
     border-color: black;
     border-style: solid;
-    color:#F6F1F1;
+    color:$prime_1;
     margin: 5px;
   }
   .dropdown-item {
     background-color: black !important;
-    color:#F6F1F1;
+    color:$prime_1;
   }
   .dropdown-menu {
     background-color: black !important;
   }
   .dropdown-divider {
-    background-color: #F6F1F1 !important;
+    background-color: $prime_1 !important;
   }
-  
-  @media only screen and (max-width: 1100px) {
-  .grid-container2 {
-    display: grid;
-    grid-template-columns: 100% ;
-    grid-template-rows: 1fr 1fr 1fr;
+  @supports (display: flex) {
+    @media screen and (max-width: 1200px) {
+      article {
+        display: flex;
+      }
+      .grid-container2 {
+        grid-template-columns: 100% ;
+        grid-template-rows: 1fr 1fr 1fr;
+        display: flex;
+      }
+        .navbar {
+          width: 100%;
+          position: relative;
+          z-index: 1 !important;
+          display: flex;
+        }
+        .tbl {
+         width: 100%;
+         position: relative;
+         z-index: 0 !important;
+         display: flex;
+        }
+        .topbox {
+         width: 100% !important;
+         font-size: 30px !important;
+         display: flex;
+        }
+    }
   }
-    .navbar {
-      width: 100%;
-      position: relative;
-      z-index: 1 !important;
-    }
-    .tbl {
-     width: 100%;
-     position: relative;
-     z-index: 0 !important;
-    }
-    .topbox {
-     width: 100% !important;
-     font-size: 30px !important;
-    }
+#vbabttn {
+  background-color: black;
+  border-width: px200 px25;
+  border-color: $prime_1;
+  border-style: solid;
+  border-radius: 5%;
+}
+#webbttn {
+  background-color: black;
+  border-width: px200 px25;
+  border-color: $prime_1;
+  border-style: solid;
+  border-radius: 5%;
+}
+ /* The snackbar - position it at the bottom and in the middle of the screen */
+ #snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+//Snack Bar Example
+ /* The snackbar - position it at the bottom and in the middle of the screen */
+ #snackbar2 {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar2.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar3 {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar3.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+} 
+//tooltip VBA btn
+ /* Tooltip container */ 
+ .tooltipp {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltipp .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltipp:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+//tooltip webbtn
+.tooltipp2 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltipp2 .tooltiptext2 {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltipp2:hover .tooltiptext2 {
+  visibility: visible;
+  opacity: 1;
+}
+// Exp bar ideas
+#exp{
+  border-width: px25;
+  border-color: black;
+  border-style: solid;
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Play;
+  height: 60px;
+}
+#exp-bar {
+  text-align: center;
+}
+.exp-bar-25 {
+  width: 0%;
+  animation-name: exp-bar-25,exp-bar-glow-25;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-delay: 0s,0s;
+}
+.exp-bar-50 {
+  width: 50%;
+  animation-name: exp-bar-50,exp-bar-glow-50;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-delay: 0s,0s;
+}
+.exp-bar-75 {
+  width: 75%;
+  animation-name: exp-bar-75,exp-bar-glow-75;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-delay: 0s,0s;
+}
+.exp-bar-100 {
+  width: 100%;
+  animation-name: exp-bar-100,exp-bar-glow-100;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-delay: 0s,0s;
+}
+@keyframes exp-bar-glow-25 {
+  from {
+    width: 0%;
+    position: relative;
+    background:#fff;
+    -webkit-filter:blur(2px);
   }
+  to { width: 25%;
+    position: relative;
+    background:#46d4ff;
+    -webkit-filter:blur(0px);
+  }
+}
+@keyframes exp-bar-glow-50 {
+  from {
+    width: 25%;
+    position: relative;
+    background:#fff;
+    -webkit-filter:blur(2px);
+  }
+  to { width: 50%;
+    position: relative;
+    background:#3db9d8;
+    -webkit-filter:blur(0px);
+  }
+}
+@keyframes exp-bar-glow-75 {
+  from {
+    width: 50%;
+    position: relative;
+    background:#fff;
+    -webkit-filter:blur(2px);
+  }
+  to { width: 75%;
+    position: relative;
+    background:#46d4ff;
+    -webkit-filter:blur(0px);
+  }
+}
+@keyframes exp-bar-glow-100 {
+  from {
+    width: 75%;
+    position: relative;
+    background:#fff;
+    -webkit-filter:blur(2px);
+  }
+  to { width: 100%;
+    position: relative;
+    background:#46d4ff;
+    -webkit-filter:blur(0px);
+  }
+}
+@keyframes exp-bar-25 {
+  from {
+    width: 0%;
+    background-color: #46d4ff; 
+    height: 25px;
+  }   
+  to {
+    width: 25%;
+    background-color: #46d4ff;
+    height: 25px;
+  } 
+}
+@keyframes exp-bar-50 {
+  from {
+    width: 25%;
+    background-color: #46d4ff; 
+    height: 25px;
+  }   
+  to {
+    width: 50%;
+    background-color: #46d4ff;
+    height: 25px;
+  } 
+}
+@keyframes exp-bar-75 {
+  from {
+    width: 50%;
+    background-color: #46d4ff; 
+    height: 25px;
+  }   
+  to {
+    width: 75%;
+    background-color: #46d4ff;
+    height: 25px;
+    }
+  } 
+
+@keyframes exp-bar-100 {
+  from {
+    width: 75%;
+    background-color: #46d4ff; 
+    height: 25px;
+  }   
+  to {
+    width: 100%;
+    background-color: #46d4ff;
+    height: 25px;
+  } 
+}
+.exp-bar-test-25 {
+  width: 0%;
+  animation-name: exp-bar-test-anime-25;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0s;
+}
+.exp-bar-test-50 {
+  width: 0%;
+  animation-name: exp-bar-test-anime-50;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0s;
+}
+.exp-bar-test-75 {
+  width: 0%;
+  animation-name: exp-bar-test-anime-75;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0s;
+}
+.exp-bar-test-100 {
+  width: 0%;
+  animation-name: exp-bar-test-anime-100;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0s;
+}
+@keyframes exp-bar-test-anime-25 {
+  from {
+    width: 0%;
+    position: relative;
+    background:#fff;
+    -webkit-filter:blur(2px);
+  }
+  to { width: 100%;
+    position: relative;
+    background: $prime_2;
+    -webkit-filter:blur(0px);
+  }
+}
+@keyframes exp-bar-test-anime-50 {
+  from {
+    width: 25%;
+    position: relative;
+    background:#fff;
+    -webkit-filter:blur(2px);
+  }
+  to { width: 100%;
+    position: relative;
+    background: $prime_2;
+    -webkit-filter:blur(0px);
+  }
+}
+@keyframes exp-bar-test-anime-75 {
+  from {
+    width: 50%;
+    position: relative;
+    background:#fff;
+    -webkit-filter:blur(2px);
+  }
+  to { width: 100%;
+    position: relative;
+    background: $prime_2;
+    -webkit-filter:blur(0px);
+  }
+}
+@keyframes exp-bar-test-anime-100 {
+  from {
+    width: 75%;
+    position: relative;
+    background:#fff;
+    -webkit-filter:blur(2px);
+  }
+  to { width: 100%;
+    position: relative;
+    background: $prime_2;
+    -webkit-filter:blur(0px);
+  }
+}
+/*Skill tree ToolTips*/
+//css beginner tooltip
+.tooltip-css-beginner {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip-css-beginner .css-beginner-text {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-css-beginner:hover .css-beginner-text {
+  visibility: visible;
+  opacity: 1;
+}
+//css intermediate tooltip
+.tooltip-css-intermediate {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip-css-intermediate .css-intermediate-text {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-css-intermediate:hover .css-intermediate-text {
+  visibility: visible;
+  opacity: 1;
+}
+//css advanced tooltip
+.tooltip-css-advanced {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip-css-advanced .css-advanced-text {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-css-advanced:hover .css-advanced-text {
+  visibility: visible;
+  opacity: 1;
+}
+//html beginner tooltip
+.tooltip-html-beginner {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip-html-beginner .html-beginner-text {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-html-beginner:hover .html-beginner-text {
+  visibility: visible;
+  opacity: 1;
+}
+//html intermediate tooltip
+.tooltip-html-intermediate {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip-html-intermediate .html-intermediate-text {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-html-intermediate:hover .html-intermediate-text {
+  visibility: visible;
+  opacity: 1;
+}
+//html advanced tooltip
+.tooltip-html-advanced {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip-html-advanced .html-advanced-text {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-html-advanced:hover .html-advanced-text {
+  visibility: visible;
+  opacity: 1;
+}
+//js beginner tooltip
+.tooltip-js-beginner {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip-js-beginner .js-beginner-text {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-js-beginner:hover .js-beginner-text {
+  visibility: visible;
+  opacity: 1;
+}
+//js intermediate tooltip
+.tooltip-js-intermediate {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip-js-intermediate .js-intermediate-text {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-js-intermediate:hover .js-intermediate-text {
+  visibility: visible;
+  opacity: 1;
+}
+//js advanced tooltip
+.tooltip-js-advanced {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip-js-advanced .js-advanced-text {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-js-advanced:hover .js-advanced-text {
+  visibility: visible;
+  opacity: 1;
+}
+//excel beginner tooltip
+.tooltip-excel-beginner {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip-excel-beginner .excel-beginner-text {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-excel-beginner:hover .excel-beginner-text {
+  visibility: visible;
+  opacity: 1;
+}
+//excel intermediate tooltip
+.tooltip-excel-intermediate {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip-excel-intermediate .excel-intermediate-text {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-excel-intermediate:hover .excel-intermediate-text {
+  visibility: visible;
+  opacity: 1;
+}
+//excel advanced tooltip
+.tooltip-excel-advanced {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip-excel-advanced .excel-advanced-text {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-excel-advanced:hover .excel-advanced-text {
+  visibility: visible;
+  opacity: 1;
+}
+//sql beginner tooltip
+.tooltip-sql-beginner {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip-sql-beginner .sql-beginner-text {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-sql-beginner:hover .sql-beginner-text {
+  visibility: visible;
+  opacity: 1;
+}
+//sql intermediate tooltip
+.tooltip-sql-intermediate {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip-sql-intermediate .sql-intermediate-text {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-sql-intermediate:hover .sql-intermediate-text {
+  visibility: visible;
+  opacity: 1;
+}
+//sql advanced tooltip
+.tooltip-sql-advanced {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip-sql-advanced .sql-advanced-text {
+  visibility: hidden;
+  width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-sql-advanced:hover .sql-advanced-text {
+  visibility: visible;
+  opacity: 1;
+}
+/*End Skill Tooltip section*/
