@@ -4,13 +4,13 @@
 //Tooltip generator based on class selection
 function x(a) {
     if (a == "Excel Wizard"){
-        return "Tool tip: \n Requirements: 9 Int, 7 Wis, 5 Tech, 4 Dex, 5 Agi, Advanced Excel. \n \n An Excel Wizard strives to be the best at Excel formulas and Excel Visual Basics, macros created by these wizards can usually save an entire department of managers 30-60 minutes a day.";
+        return "Tool tip: \n Requirements: Level 47, Int 9, Wis 7, Con 5, Tech 5, Dex 4, Agi 5, Excel Advanced \n \n An Excel Wizard strives to be the best at Excel formulas and Excel Visual Basics, macros created by these wizards can usually save an entire department of managers 30-60 minutes a day.";
     } else if (a == "HTML/CSS Wizard"){
-        return "Tool tip: \n Requirements: 10 Int, 8 Wis, Intermediate HTML, Intermediate CSS, Basic JavaScript, and Basic SQL. \n \n An HTML/CSS Wizard with strong front end web design abilities, they excel at building webpages.";
+        return "Tool tip: \n Requirements: Level 48, Int 10, Wis 8, Con 5, Tech 8, Dex 5, Agi 5, CSS Advanced \n \n An HTML/CSS Wizard with strong front end web design abilities, they excel at building webpages.";
     } else if (a == "JavaScript Wizard") {
-        return "Tool tip: \n Requirements: 12 Int, 9 Wis, Intermediate HTML, Intermediate CSS, Intermediate JavaScript, Basic Excel, and Basic SQL. \n \n JavaScript Wizards make the magic happen on web pages, JavaScript is the world's most popular programming language."
+        return "Tool tip: \n Requirements: Level 49, Int 10, Wis 12, Con 5, Tech 8, Dex 5, Agi 5, JavaScript Advanced \n \n JavaScript Wizards make the magic happen on web pages, JavaScript is the world's most popular programming language."
     } else if (a == "Supreme Wizard") {
-        return "Tool tip: \n Requirements: 15 Int, 12 Wis, Advanced HTML, Advanced CSS, Advanced JavaScript, Advanced Excel, and Intermediate SQL. \n \n The Supreme Wizard has mastered all the skills needed to be successful in the web design industry. Wielding strong HTML/CSS/JavaScript skills, these wizards can put out high quality work and have additional skill sets in other areas."
+        return "Tool tip: \n Requirements: Level 50, Int 11, Wis 12, Con 6, Tech 9, Dex 5, Agi 5, SQL Advanced \n \n The Supreme Wizard has mastered all the skills needed to be successful in the web design industry. Wielding strong HTML/CSS/JavaScript skills, these wizards can put out high quality work and have additional skill sets in other areas."
     }else {
         return "Tool tip: \n Matthew was born in Kansas, and raised in Florida. He went to school at Saint Augustine High School, and spent another two years completing a graphic arts class for a certificate in media art. Currently enrolled in the Correlation-One font end web developer class. \n \n His first job was an Assistant Art Director at David Dobbs Menu Design, followed by several retail jobs such as Kroger, a management role at a restaurant, and finally a tier 1 entry job at Amazon. Here at Amazon he quickly developed into a strong leader and problem solver. Several promotions later, Matthew has become a Data and Reporting Analyst and studies Excel VBA and SQL.";
     }
@@ -73,7 +73,6 @@ function myFunction() {
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
     }
 }
-
   function myFunction2() {
     if(document.getElementById("level").innerText >= 50) {
         
@@ -122,13 +121,9 @@ function expbarprogress() {
         document.getElementById("exp2").setAttribute("class", "exp-bar-test-100");
     } 
 }
-//Functions for Class Changing
-
-
-
 //start skill requirements
     class skill {
-        constructor(skillid,reqlevel,Int,Wis,Con,Tech,Dex,Agi,SkP) {
+        constructor(skillid,reqlevel,Int,Wis,Con,Tech,Dex,Agi,SkP,skillpower) {
             this.skillid = skillid;
             this.reqlevel = reqlevel;
             this.Int = Int;
@@ -138,23 +133,25 @@ function expbarprogress() {
             this.Dex = Dex;
             this.Agi = Agi;
             this.SkP = SkP;
+            this.skillpower = skillpower;
         }
     }
-    var cssbeginner = new skill("cssbeginner","none",15,5,4,5,4,4,1);
-    var cssintermediate = new skill("cssintermediate","cssbeginner",5,15,4,5,4,4,1);
-    var cssadvanced = new skill("cssadvanced","cssintermediate",9,19,4,5,4,4,1);
-    var htmlbeginner = new skill("htmlbeginner","none",7,5,4,5,4,4,1);
-    var htmlintermediate = new skill("htmlintermediate","htmlbeginner",3,5,4,5,4,4,1);
-    var htmladvanced = new skill("htmladvanced","htmlintermediate",5,5,4,5,4,4,1);
-    var jsbeginner = new skill("jsbeginner","none",2,5,4,5,4,4,1);
-    var jsintermediate = new skill("jsintermediate","jsbeginner",5,5,4,5,4,4,1);
-    var jsadvanced = new skill("jsadvanced","jsintermediate",5,5,4,5,4,4,1);
-    var excelbeginner = new skill("excelbeginner","none",1,5,4,5,4,4,1);
-    var excelintermediate = new skill("excelintermediate","excelbeginner",5,5,4,5,4,4,1);
-    var exceladvanced = new skill("exceladvanced","excelintermediate",5,5,4,5,4,4,1);
-    var sqlbeginner = new skill("sqlbeginner","none",5,5,4,5,4,4,1);
-    var sqlintermediate = new skill("sqlintermediate","sqlbeginner",5,5,4,5,4,4,1);
-    var sqladvanced = new skill("sqladvanced","sqlintermediate",5,15,4,5,4,4,1);
+
+    var cssbeginner = new skill("cssbeginner","none",4,5,4,5,4,4,1,"CSS Skill Power: +50%");
+    var cssintermediate = new skill("cssintermediate","cssbeginner",5,6,4,5,4,4,1,"CSS Skill Power: +30%");
+    var cssadvanced = new skill("cssadvanced","cssintermediate",10,13,4,5,4,4,2,"CSS Skill power: +20%");
+    var htmlbeginner = new skill("htmlbeginner","none",7,5,4,5,4,4,1,"HTML Skill Power: +30%");
+    var htmlintermediate = new skill("htmlintermediate","htmlbeginner",3,5,4,5,4,4,1,"HTML Skill Power: +60%");
+    var htmladvanced = new skill("htmladvanced","htmlintermediate",10,12,6,6,4,4,2,"HTML Skill Power: +10%");
+    var jsbeginner = new skill("jsbeginner","none",2,5,4,5,4,4,1,"JavaScript Skill Power: +65%");
+    var jsintermediate = new skill("jsintermediate","jsbeginner",10,9,4,9,4,4,1,"JavaScript Skill Power: +20%");
+    var jsadvanced = new skill("jsadvanced","jsintermediate",11,10,4,10,4,4,2,"JavaScript Skill Power: +15%");
+    var excelbeginner = new skill("excelbeginner","none",1,5,4,5,4,4,1,"Excel Skill Power: +30%");
+    var excelintermediate = new skill("excelintermediate","excelbeginner",5,7,4,6,4,4,1,"Excel Skill power: +30%");
+    var exceladvanced = new skill("exceladvanced","excelintermediate",12,9,4,5,4,4,2,"Excel Skill power: +40%");
+    var sqlbeginner = new skill("sqlbeginner","none",5,5,4,5,4,4,1,"SQL Skill power: +50%");
+    var sqlintermediate = new skill("sqlintermediate","sqlbeginner",5,5,4,5,4,4,1,"SQL Skill power: +25%");
+    var sqladvanced = new skill("sqladvanced","sqlintermediate",10,12,6,8,4,4,2,"SQL Skill power: +25%");
     
     var skilllist = [
         cssbeginner,cssintermediate,cssadvanced,
@@ -163,7 +160,9 @@ function expbarprogress() {
         excelbeginner,excelintermediate,exceladvanced,
         sqlbeginner,sqlintermediate,sqladvanced
     ]
-
+//Acquired Skills Variable
+    var learnedSkills = ["none", "cssbeginner", "cssintermediate", "htmlbeginner", "htmlintermediate",
+      "jsbeginner", "excelbeginner", "excelintermediate", "exceladvanced", "sqlbeginner"]
 //Loops for tooltip stats, this was a pain to setup.
 function requirementToolTip(sk){
     for (skill of skilllist) {
@@ -171,9 +170,7 @@ function requirementToolTip(sk){
         let mab = 0;
         let reqname = "";
         let pickskill = sk.className.split(' ')[0];
-        
             for (let x in skill) {
-                
                 if (x == "skillid") {var skillname = skill[x];
                 }
                 if (mab == 0) {
@@ -194,6 +191,8 @@ function requirementToolTip(sk){
                     reqname = "Agi: ";
                 } else if (mab == 8) {
                     reqname = "\n Required SP: ";
+                } else if (mab == 9) {
+                    reqname = "\n";
                 }
                 txt +=  reqname + skill[x] + " ";
                 mab += 1;
@@ -216,43 +215,177 @@ function learnaskill(skillid) {
         for (let i = 0; i < skilllist.length; i++) {
             let matchskill = skilllist[i].skillid;
             if (matchskill == pickskill) {
-                //if (skilllist[i].reqlevel <= Skilllevel) {
-                if (skilllist[i].Int <= IntStat) {
-                    if (skilllist[i].Wis <= WisStat) {
-                        if (skilllist[i].Con <= ConStat) {
-                            if (skilllist[i].Tech <= TechStat) {
-                                if (skilllist[i].Dex <= DexStat) {
-                                    if (skilllist[i].Agi <= AgiStat) {
-                                        if (skilllist[i].SkP <= SpStat) {
-                                            document.getElementById("acquired-skill-tree").appendChild(skillid);
-                                            document.getElementById("sp").innerText -= 1;
-                                            break;
+                if (hasskill(matchskill)){
+                    document.getElementById("snackbar4").innerHTML = "You already know this skill.";
+                    myFunction4()
+                    break;
+                }
+                if (hasskill(skilllist[i].reqlevel)) {
+                    if (skilllist[i].Int <= IntStat) {
+                        if (skilllist[i].Wis <= WisStat) {
+                            if (skilllist[i].Con <= ConStat) {
+                                if (skilllist[i].Tech <= TechStat) {
+                                    if (skilllist[i].Dex <= DexStat) {
+                                        if (skilllist[i].Agi <= AgiStat) {
+                                            if (skilllist[i].SkP <= SpStat) {
+                                                document.getElementById("acquired-skill-tree").appendChild(skillid);
+                                                document.getElementById("sp").innerText -= skilllist[i].SkP;
+                                                    if(matchskill == "jsintermediate"){
+                                                        document.getElementById("skills3").setAttribute("class", "js1");
+                                                    } else if(matchskill == "jsadvanced"){
+                                                        document.getElementById("skills3").setAttribute("class", "js2");
+                                                    } else if(matchskill == "cssadvanced"){
+                                                        document.getElementById("skills2").setAttribute("class", "css1");
+                                                    }else if(matchskill == "htmladvanced"){
+                                                        document.getElementById("skills1").setAttribute("class", "html1");
+                                                    }else if(matchskill == "sqlintermediate"){
+                                                        document.getElementById("skills4").setAttribute("class", "sql1");
+                                                    }else if(matchskill == "sqladvanced"){
+                                                        document.getElementById("skills4").setAttribute("class", "sql2");
+                                                    }
+                                                learnedSkills.push(pickskill);
+                                                break;
+                                            } else {
+                                                document.getElementById("snackbar4").innerHTML = "You don't have enough SP - [" + skilllist[i].SkP + "]";
+                                                myFunction4()
+                                            }
                                         } else {
-                                            skillid.innerHTML = "You Don't have enough SP.";
+                                            document.getElementById("snackbar4").innerHTML = "You don't have the required Agi - [" + skilllist[i].Agi + "]";
+                                            myFunction4()
                                         }
                                     } else {
-                                        skillid.innerHTML = "You Don't have the required Agi.";
+                                        document.getElementById("snackbar4").innerHTML = "You don't have the required Dex - [" + skilllist[i].Dex + "]";
+                                        myFunction4()
                                     }
                                 } else {
-                                    skillid.innerHTML = "You Don't have the required Dex.";
-                                }
+                                    document.getElementById("snackbar4").innerHTML = "You don't have the required Tech - [" + skilllist[i].Tech + "]";
+                                    myFunction4()
+                                }        
                             } else {
-                                skillid.innerHTML = "You Don't have the required Tech.";
-                            }        
+                                document.getElementById("snackbar4").innerHTML = "You don't have the required Con - [" + skilllist[i].Con + "]";
+                                myFunction4()
+                            }
                         } else {
-                            skillid.innerHTML = "You Don't have the required Con.";
+                            document.getElementById("snackbar4").innerHTML = "You don't have the required Wis - [" + skilllist[i].Wis + "]";
+                            myFunction4()
                         }
-                    } else {
-                        skillid.innerText = "You Don't have the required Wis.";
-                    }
                 } else{
-                    skillid.innerText = "You Don't have the required Int.";
+                    document.getElementById("snackbar4").innerHTML = "You don't have the required Int - [" + skilllist[i].Int + "]";
+                    myFunction4()
                 }
+            } else {
+                document.getElementById("snackbar4").innerHTML = "Missing the proceeding skill - [" + skilllist[i].reqlevel + "]";
+                myFunction4()
+            }
             }
         }
 }
+function myFunction4() {
+        var x = document.getElementById("snackbar4");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 6000);
+  }
 //New Function to check if proceeding skill was learned.
+function hasskill(reqskill){
+    for (let i =0; i < learnedSkills.length; i++){
+        if(reqskill == learnedSkills[i]) {
+            return true;
+        }
+    }
+}
+//Start Class change section
+class wizards {
+    constructor(wizname,wizid,proceedingclass,reqlevel,Int,Wis,Con,Tech,Dex,Agi,reqskills) {
+        this.wizname = wizname;
+        this.wizid = wizid;
+        this.proceedingclass = proceedingclass;
+        this.reqlevel = reqlevel;
+        this.Int = Int;
+        this.Wis = Wis;
+        this.Con = Con;
+        this.Tech = Tech;
+        this.Dex = Dex;
+        this.Agi = Agi;
+        this.reqskills = reqskills;
+    }
+}
 
+var excelwizard = new wizards("Excel Wizard","excelwizard","none",47,9,7,5,5,4,5,"exceladvanced");
+var htmlcsswizard = new wizards("Html/CSS Wizard","htmlcsswizard","excelwizard",48,10,8,5,8,5,5,"cssadvanced");
+var javascriptwizard = new wizards("JavaScript Wizard","javascriptwizard","htmlcsswizard",49,10,12,5,8,5,5,"jsadvanced");
+var supremewizard = new wizards("Surpeme Wizard", "supremewizard", "javascriptwizard",50,11,12,6,9,5,5,"sqladvanced");
+
+var wizardlist = [
+    excelwizard, htmlcsswizard, javascriptwizard, supremewizard
+]
+function classchangewizard() {
+    let LvlStat = document.getElementById("level").innerText;
+    let IntStat = document.getElementById("Int").innerText;
+    let WisStat = document.getElementById("Wis").innerText;
+    let ConStat = document.getElementById("Con").innerText;
+    let TechStat = document.getElementById("Tech").innerText;
+    let DexStat = document.getElementById("Dex").innerText;
+    let AgiStat = document.getElementById("Agi").innerText;
+    let pickclass = document.getElementById("matthewclass").className;
+        for (let i = 0; i < wizardlist.length; i++) {
+            let matchclass = wizardlist[i].proceedingclass;
+            if (matchclass == pickclass) {
+                if (wizardlist[i].reqlevel <= LvlStat){
+                    if (hasskill(wizardlist[i].reqskills)){
+                        if (wizardlist[i].Int <= IntStat){
+                            if (wizardlist[i].Wis <= WisStat){
+                                if (wizardlist[i].Con <= ConStat){
+                                    if (wizardlist[i].Tech <= TechStat){
+                                        if (wizardlist[i].Dex <= DexStat){
+                                            if (wizardlist[i].Agi <= AgiStat){
+                                                document.getElementById("matthewclass").innerText = wizardlist[i].wizname;
+                                                document.getElementById("matthewclass").setAttribute("class", wizardlist[i].wizid);
+                                                let pickclass = document.getElementById("matthewclass").className 
+                                                    if (pickclass == "supremewizard") {
+                                                        document.getElementById("classchange").innerText = "Final Class Reached!";
+                                                    } else {
+                                                        document.getElementById("classchange").innerText = "Change class \n" + wizardlist[i + 1].wizname;
+                                                        }
+                                                } else {
+                                                    document.getElementById("snackbar5").innerHTML = "Not enough Agi - [" + wizardlist[i].Agi + "]";
+                                                    myFunction5()
+                                                    }
+                                            } else {
+                                                document.getElementById("snackbar5").innerHTML = "Not enough Dex - [" + wizardlist[i].Dex + "]";
+                                                myFunction5()
+                                                }
+                                        } else {
+                                            document.getElementById("snackbar5").innerHTML = "Not enough Tech - [" + wizardlist[i].Tech + "]";
+                                            myFunction5()
+                                            }
+                                    } else {
+                                        document.getElementById("snackbar5").innerHTML = "Not enough Con - [" + wizardlist[i].Con + "]";
+                                        myFunction5()
+                                        }
+                                } else {
+                                    document.getElementById("snackbar5").innerHTML = "Not enough Wis - [" + wizardlist[i].Wis + "]";
+                                    myFunction5()
+                                    }
+                            } else {
+                                document.getElementById("snackbar5").innerHTML = "Not enough Int - [" + wizardlist[i].Int + "]";
+                                myFunction5()
+                                }
+                        } else {
+                            document.getElementById("snackbar5").innerHTML = "Missing a required Skill - [" + wizardlist[i].reqskills + "]";
+                            myFunction5()
+                            }
+                    } else {
+                        document.getElementById("snackbar5").innerHTML = "Need to reach level - [" + wizardlist[i].reqlevel + "]";
+                        myFunction5()
+                        }
+            }
+        }
+}
+function myFunction5() {
+    var x = document.getElementById("snackbar5");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 6000);
+}
 //reduce double click highlighting text, putting in attribute points caused the problem, this is hopefully the solution.
 document.addEventListener('mousedown', function(event) {
     if (event.detail > 1) {
