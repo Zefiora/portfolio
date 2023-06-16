@@ -73,6 +73,11 @@ function myFunction() {
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
     }
 }
+function myFunctionwebproject() {
+    var x = document.getElementById("snackbar-webproject");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
   function myFunction2() {
     if(document.getElementById("level").innerText >= 50) {
         
@@ -93,6 +98,9 @@ function expbar() {
         document.getElementById("exp-bar").innerText = 100;
         expbarprogress();
         myFunction3();
+    } else if (document.getElementById("level").innerText == 45) {
+        document.getElementById("vbabttn").setAttribute("class", "vbabttndisabler");
+        document.getElementById("tltp").setAttribute("class", "vbabttndisabler");
     } else {
         if(document.getElementById("exp-bar").innerText == 100){
             document.getElementById("exp-bar").innerText = 25;
@@ -375,7 +383,7 @@ function classchangewizard() {
                             myFunction5()
                             }
                     } else {
-                        document.getElementById("snackbar5").innerHTML = "Need to reach level - [" + wizardlist[i].reqlevel + "]";
+                        document.getElementById("snackbar5").innerHTML = "Need to reach level - [" + wizardlist[i].reqlevel + "] \n Click - Complete a Project - Button to earn exp and level up!";
                         myFunction5()
                         }
             }

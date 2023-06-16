@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet"> 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-</head>
-<body style="background-color:#141000">
+  </head>
+<body>
   <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <!--<a class="navbar-brand" href="#">Navbar</a>-->
@@ -50,34 +50,43 @@
     </div>
   </div>
 </nav>
-  <table class="tbl">
-    <tbody>
-      <tr>
-        <td>
-        <div class="topbox">
+<div class="new-main-wrapper">
+        <div class="topbox99">
           Help Matthew reach his full potential, level him up, apply attribute points and unlock skills. <br>Then help him class change into a supreme wizard!
         </div>
-        <div id="exp">Experience Bar
+        <div id="exp99">Experience Bar
           <div id="exp2">
             <div id="exp-bar">
+              0
             </div><!--exp-bar-->
           </div>
         </div><!--exp-->
     <div class="expwrapper">
-      <div class="tooltipp"><!--Tooltip-->
+      <div class="tooltipp" id="tltp"><!--Tooltip-->
         <span class="tooltiptext">Click here to start a project and get Matthew the Exp he needs to level up! You will also gain a skill point!</span>
-        <button id="vbabttn" onclick="myFunction(); expbar();">Complete a Project</button><!-- Use a button to open the snackbar -->
+        <button id="vbabttn" class="" onclick="myFunction(); expbar();">Complete a Project</button><!-- Use a button to open the snackbar -->
       </div><!--End Tooltip-->
       <div id="snackbar"><p><span>Project Completed!</span><span>Earned Exp - 1,000</span><span>Earned 1 Skill Point</span></p>
       </div><!-- End VBA snackbar -->
         <div id="snackbar3"><p><span>You have reached the max level of 50!</span><span>Earned Exp - 0</span></p>
         </div><!--End Website snackbar -->
+      <div class="tooltipp2" id="tltp-webproject"><!--Tooltip-->
+        <span class="tooltiptext2">Click here to start a project and get Matthew the Exp he needs to level up! You will also gain a skill point!</span>
+        <button id="webprojectbttn" class="" onclick="myFunction(); expbar();">Web Project</button><!-- Use a button to open the snackbar -->
+      </div><!--End Tooltip-->
+      <div id="snackbar2"><p><span>Project Completed!</span><span>Earned Exp - 1,000</span><span>Earned 1 Skill Point</span></p>
+      </div><!-- End VBA snackbar -->
+        <div id="snackbar3"><p><span>You have reached the max level of 50!</span><span>Earned Exp - 0</span></p>
+        </div><!--End Website snackbar -->
     </div><!--End expwrapper-->
-          <br>
-          <img src="./docs/assets/image1.jpeg" width=200 align=left alt="A picture of Matthew Barnes, Male, green eyes, short red hair and beard. Wearing a black Jacket.">  
+        <div id="character-profile-wrapper">
+          <div id="image-profiletext">
+            <img src="./docs/assets/image1.jpeg" align=left alt="A picture of Matthew Barnes, Male, green eyes, short red hair and beard. Wearing a black Jacket." id="mypic">  
+            <div>Matthew Barnes, Data & Reporting Analyst</div>
+          </div>
           <div class="charactername">
                   <h4 class="nameandlevel">Matthew Barnes - Level </h4>
-                  <h3><img src="./docs/assets/goldframe.png" width="100%"><div class="lvl" id="level">47</div></h3>
+                  <h3><img src="./docs/assets/goldframe.png" width="100%"><div class="lvl" id="level">41</div></h3>
                   <h3>
                     <div class="excelwizard" id="matthewclass"  onmouseout="mouseOut(this)">
                     Excel Wizard
@@ -90,253 +99,253 @@
                   </h3>
               <label for="sclass">Class Requirements: </label>
               <select name="sclass" class="classes" id="class-select" onmouseout="mouseOut(this)">
-                <option value="blankv" class="options">Select a Class</option>
                 <option value="excel" class="options">Excel Wizard</option>
                 <option value="htmlcss" class="options">HTML/CSS Wizard</option>
                 <option value="jswiz" class="options">JavaScript Wizard</option>
                 <option value="superwiz" class="options">Supreme Wizard</option>
               </select>
           </div><!--End Character Name-->
-          <div class="attributepoints">
-            <div class="availableattributes">
-                <div>
-                  <h4>Attribute Points</h4>
-                </div><!--Text Attribute points-->
-              <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
-                <div class="attr attrpoints">
-                Points
-                </div>
-                <div class="attrvalue attrpoints" id="availableattrpoints">
-                  9
-                </div><!--End Attribute Value-->
-              </div><!-- End Attribute Item-->
-            </div><!--"availableattributes"-->
-              <div class="bio" id="tooltiper">
-                <p>Matthew was born in Kansas, and raised in Florida. He went to school at Saint Augustine High School, and spent another two years completing a graphic arts class for a certificate in media art. Currently enrolled in the Correlation-One font end web developer class.
-                </p>
-                <p>
-                  His first job was an Assistant Art Director at David Dobbs Menu Design, followed by several retail jobs such as Krogars, a management role at a resturant, and finally a tier 1 entry job at Amazon. Here at Amazon he quickly developed into a strong leader
-                  and problem solver. Several promotions later, Matthew has become a Data and Reporting Analyst and studies Excel VBA and SQL.
-                </p>
-              </div><!--End Bio-->
-            </div><!-- End Attribute List 1-->
-          <div class="attributelist">
-            <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseClick(this)">
-              <div class="attr">
-              Int
-              </div>
-              <div class="attrvalue" id="Int">
-                9
-              </div><!--End Attribute Value-->
-            </div><!-- End Attribute Item-->
-            <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"  onclick="mouseClick(this)">
-              <div class="attr">
-                Wis
-              </div>
-              <div class="attrvalue" id="Wis">
-                7
-              </div><!--End Attribute Value-->
-            </div><!-- End Attribute Item-->
-            <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"  onclick="mouseClick(this)">
-              <div class="attr">
-                Con
-              </div>
-              <div class="attrvalue" id="Con">
-                5
-              </div><!--End Attribute Value-->
-            </div><!-- End Attribute Item-->
-            <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"  onclick="mouseClick(this)">
-              <div class="attr">
-                Tech
-              </div>
-              <div class="attrvalue" id="Tech">
-                7
-              </div><!--End Attribute Value-->
-            </div><!-- End Attribute Item-->
-            <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"  onclick="mouseClick(this)">
-              <div class="attr">
-                Dex
-              </div>
-              <div class="attrvalue" id="Dex">
-                5
-              </div><!--End Attribute Value-->
-            </div><!-- End Attribute Item-->
-            <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"  onclick="mouseClick(this)">
-              <div class="attr">
-                Agi
-              </div>
-              <div class="attrvalue" id="Agi">
-                5
-              </div><!--End Attribute Value-->
-            </div><!-- End Attribute Item-->
-          </div><!--End Attribute List 2-->
-          </td>
-        </tr>
-    </tbody>
-  </table>
-<div id="skillscontainer"><!--Main Container for skills-->
-    <div id="acquiredskillscontainer">
-      <div class="skillpoints" id="availableskillpoints">
+          <div id="stat-bio-wrapper">
+            <div class="attributepoints">
+              <div class="availableattributes">
+                  <div>
+                    <h4>Attribute Points</h4>
+                  </div><!--Text Attribute points-->
+                <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+                  <div class="attr attrpoints">
+                  Points
+                  </div>
+                  <div class="attrvalue attrpoints" id="availableattrpoints">
+                    9
+                  </div><!--End Attribute Value-->
+                </div><!-- End Attribute Item-->
+              </div><!--"availableattributes"-->
+              <div class="attributelist">
+                <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseClick(this)">
+                  <div class="attr">
+                  Int
+                  </div>
+                  <div class="attrvalue" id="Int">
+                    9
+                  </div><!--End Attribute Value-->
+                </div><!-- End Attribute Item-->
+                <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"  onclick="mouseClick(this)">
+                  <div class="attr">
+                    Wis
+                  </div>
+                  <div class="attrvalue" id="Wis">
+                    7
+                  </div><!--End Attribute Value-->
+                </div><!-- End Attribute Item-->
+                <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"  onclick="mouseClick(this)">
+                  <div class="attr">
+                    Con
+                  </div>
+                  <div class="attrvalue" id="Con">
+                    5
+                  </div><!--End Attribute Value-->
+                </div><!-- End Attribute Item-->
+                <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"  onclick="mouseClick(this)">
+                  <div class="attr">
+                    Tech
+                  </div>
+                  <div class="attrvalue" id="Tech">
+                    7
+                  </div><!--End Attribute Value-->
+                </div><!-- End Attribute Item-->
+                <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"  onclick="mouseClick(this)">
+                  <div class="attr">
+                    Dex
+                  </div>
+                  <div class="attrvalue" id="Dex">
+                    5
+                  </div><!--End Attribute Value-->
+                </div><!-- End Attribute Item-->
+                <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"  onclick="mouseClick(this)">
+                  <div class="attr">
+                    Agi
+                  </div>
+                  <div class="attrvalue" id="Agi">
+                    5
+                  </div><!--End Attribute Value-->
+                </div><!-- End Attribute Item-->
+              </div><!--End Attribute List 2-->
+            </div><!-- attributepoints end-->
+            <div class="bio" id="tooltiper">
+              <p>Matthew was born in Kansas, and raised in Florida. He went to school at Saint Augustine High School, and spent another two years completing a graphic arts class for a certificate in media art. Currently enrolled in the Correlation-One font end web developer class.
+              </p>
+              <p>
+                His first job was an Assistant Art Director at David Dobbs Menu Design, followed by several retail jobs such as Krogars, a management role at a resturant, and finally a tier 1 entry job at Amazon. Here at Amazon he quickly developed into a strong leader
+                and problem solver. Several promotions later, Matthew has become a Data and Reporting Analyst and studies Excel VBA and SQL.
+              </p>
+            </div><!--End Bio-->
+          </div><!--stat-bio-wrapper end-->
+        </div><!--character-profile-wrapper end-->
+    <div id="skillscontainer"><!--Main Container for skills-->
+        <div id="acquiredskillscontainer">
+          <div class="skillpoints" id="availableskillpoints">
+            <div>
+              <h3>Available Skill Points: </h3>
+              <br>
+              <h5>Learned Skills</h5>
+            </div>
+            <div class="attributeitem">
+                  <div class="attr">
+                  SP
+                  </div>
+                  <div class="attrvalue" id="sp">
+                  0
+                  </div>
+            </div><!--attributeitem-->
+          </div><!--availableskillpoints-->
+          <div class="skilltree" id="acquired-skill-tree"><!--skills will be placed here-->
+            <div class="cssbeginner skillitem" id="css-beginner" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
+              <div class="tooltip-css-beginner"><!--Tooltip-->
+                <span class="css-beginner-text"><span class="tultip"></span> <br>CSS Skill level: Beginner</span>
+              <img src="./docs/assets/css-beginner-icon.png" width="100%">
+              </div><!--End Tooltip-->
+            </div><!--css-beginner-->
+            <div class="cssintermediate skillitem" id="css-intermediate" onclick="learnaskill(this)"  onmouseover="requirementToolTip(this)">
+              <div class="tooltip-css-intermediate"><!--Tooltip-->
+                <span class="css-intermediate-text"><span class="tultip"></span> <br>CSS Skill level: Intermediate</span>
+                <img src="./docs/assets/css-intermediate-icon.png" width="100%">
+              </div><!--End Tooltip-->
+            </div><!--css-intermediate-->
+            <div class="htmlbeginner skillitem" id="html-beginner" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
+              <div class="tooltip-html-beginner"><!--Tooltip-->
+                <span class="html-beginner-text"><span class="tultip"></span><br>HTML Skill level: Beginner</span>
+                <img src="./docs/assets/html-beginner-icon.png" width="100%">
+              </div><!--End Tooltip-->
+            </div>
+            <div class="htmlintermediate skillitem" id="html-intermediate" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
+              <div class="tooltip-html-intermediate"><!--Tooltip-->
+                <span class="html-intermediate-text"><span class="tultip"></span><br>HTML Skill level: Intermediate</span>
+                <img src="./docs/assets/html-intermediate-icon.png" width="100%">
+              </div><!--End Tooltip-->
+            </div>
+            <div class="excelbeginner skillitem" id="excel-beginner" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
+              <div class="tooltip-excel-beginner"><!--Tooltip-->
+              <span class="excel-beginner-text"><span class="tultip"></span><br>Excel Skill level: Beginner</span>
+              <img src="./docs/assets/excel-beginner-icon.png" width="100%">
+              </div><!--End Tooltip-->
+            </div>
+            <div class="excelintermediate skillitem" id="excel-intermediate" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
+              <div class="tooltip-excel-intermediate"><!--Tooltip-->
+                <span class="excel-intermediate-text"><span class="tultip"></span><br>Excel Skill level: Intermediate</span>
+                <img src="./docs/assets/excel-intermediate-icon.png" width="100%">
+              </div><!--End Tooltip-->
+            </div>
+            <div class="exceladvanced skillitem" id="excel-advanced" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
+              <div class="tooltip-excel-advanced"><!--Tooltip-->
+                <span class="excel-advanced-text"><span class="tultip"></span><br>Excel Skill level: Advanced</span>
+                <img src="./docs/assets/excel-advanced-icon.png" width="100%">
+              </div><!--End Tooltip-->
+            </div>
+            <div class="sqlbeginner skillitem" id="sql-beginner" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
+              <div class="tooltip-sql-beginner"><!--Tooltip-->
+                <span class="sql-beginner-text"><span class="tultip"></span><br>SQL Skill level: Beginner</span>
+                <img src="./docs/assets/sql-beginner-icon.png" width="100%">
+              </div><!--End Tooltip-->
+            </div>
+            <div class="jsbeginner skillitem" id="js-beginner" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
+              <div class="tooltip-js-beginner"><!--Tooltip-->
+                <span class="js-beginner-text"><span class="tultip"></span><br>JavaScript Skill level: Beginner</span>
+                <img src="./docs/assets/js-beginner-icon.png" width="100%">
+              </div><!--End Tooltip-->
+            </div>
+          </div>
+        </div>
+      <div id="skilltreecontainer">
         <div>
-          <h3>Available Skill Points: </h3>
-          <br>
-          <h5>Learned Skills</h5>
+          <h2>Skill List</h2>
+          <div id="snackbar4">
+          </div><!--End Website snackbar -->
         </div>
-        <div class="attributeitem">
-              <div class="attr">
-              SP
-              </div>
-              <div class="attrvalue" id="sp">
-              0
-              </div>
-        </div><!--attributeitem-->
-      </div><!--availableskillpoints-->
-      <div class="skilltree" id="acquired-skill-tree"><!--Empty to start, skills will be placed here-->
-        <div class="cssbeginner skillitem" id="css-beginner" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
-          <div class="tooltip-css-beginner"><!--Tooltip-->
-            <span class="css-beginner-text"><span class="tultip"></span> <br>CSS Skill level: Beginner</span>
-          <img src="./docs/assets/css-beginner-icon.png" width="100%">
-          </div><!--End Tooltip-->
-        </div><!--css-beginner-->
-        <div class="cssintermediate skillitem" id="css-intermediate" onclick="learnaskill(this)"  onmouseover="requirementToolTip(this)">
-          <div class="tooltip-css-intermediate"><!--Tooltip-->
-            <span class="css-intermediate-text"><span class="tultip"></span> <br>CSS Skill level: Intermediate</span>
-            <img src="./docs/assets/css-intermediate-icon.png" width="100%">
-          </div><!--End Tooltip-->
-        </div><!--css-intermediate-->
-        <div class="htmlbeginner skillitem" id="html-beginner" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
-          <div class="tooltip-html-beginner"><!--Tooltip-->
-            <span class="html-beginner-text"><span class="tultip"></span><br>HTML Skill level: Beginner</span>
-            <img src="./docs/assets/html-beginner-icon.png" width="100%">
-          </div><!--End Tooltip-->
-        </div>
-        <div class="htmlintermediate skillitem" id="html-intermediate" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
-          <div class="tooltip-html-intermediate"><!--Tooltip-->
-            <span class="html-intermediate-text"><span class="tultip"></span><br>HTML Skill level: Intermediate</span>
-            <img src="./docs/assets/html-intermediate-icon.png" width="100%">
-          </div><!--End Tooltip-->
-        </div>
-        <div class="excelbeginner skillitem" id="excel-beginner" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
-          <div class="tooltip-excel-beginner"><!--Tooltip-->
-          <span class="excel-beginner-text"><span class="tultip"></span><br>Excel Skill level: Beginner</span>
-          <img src="./docs/assets/excel-beginner-icon.png" width="100%">
-          </div><!--End Tooltip-->
-        </div>
-        <div class="excelintermediate skillitem" id="excel-intermediate" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
-          <div class="tooltip-excel-intermediate"><!--Tooltip-->
-            <span class="excel-intermediate-text"><span class="tultip"></span><br>Excel Skill level: Intermediate</span>
-            <img src="./docs/assets/excel-intermediate-icon.png" width="100%">
-          </div><!--End Tooltip-->
-        </div>
-        <div class="exceladvanced skillitem" id="excel-advanced" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
-          <div class="tooltip-excel-advanced"><!--Tooltip-->
-            <span class="excel-advanced-text"><span class="tultip"></span><br>Excel Skill level: Advanced</span>
-            <img src="./docs/assets/excel-advanced-icon.png" width="100%">
-          </div><!--End Tooltip-->
-        </div>
-        <div class="sqlbeginner skillitem" id="sql-beginner" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
-          <div class="tooltip-sql-beginner"><!--Tooltip-->
-            <span class="sql-beginner-text"><span class="tultip"></span><br>SQL Skill level: Beginner</span>
-            <img src="./docs/assets/sql-beginner-icon.png" width="100%">
-          </div><!--End Tooltip-->
-        </div>
-        <div class="jsbeginner skillitem" id="js-beginner" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
-          <div class="tooltip-js-beginner"><!--Tooltip-->
-            <span class="js-beginner-text"><span class="tultip"></span><br>JavaScript Skill level: Beginner</span>
-            <img src="./docs/assets/js-beginner-icon.png" width="100%">
-          </div><!--End Tooltip-->
-        </div>
+        <div class="skilltree" id="all-skill-list">
+          <div class="cssadvanced skillitem" id="css-advanced" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
+            <div class="tooltip-css-advanced"><!--Tooltip-->
+              <span class="css-advanced-text"><span class="tultip"></span><br>CSS Skill level: Advanced</span>
+              <img src="./docs/assets/css-advanced-icon.png" width="100%">
+            </div><!--End Tooltip-->
+          </div><!--css-advanced-->
+          <div class="htmladvanced skillitem" id="html-advanced" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
+            <div class="tooltip-html-advanced"><!--Tooltip-->
+              <span class="html-advanced-text"><span class="tultip"></span><br>HTML Skill level: Advanced</span>
+              <img src="./docs/assets/html-advanced-icon.png" width="100%">
+            </div><!--End Tooltip-->
+          </div>
+          <div class="jsintermediate skillitem" id="js-intermediate" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
+            <div class="tooltip-js-intermediate"><!--Tooltip-->
+            <span class="js-intermediate-text"><span class="tultip"></span><br>JavaScript Skill level: Intermediate</span>
+            <img src="./docs/assets/js-intermediate-icon.png" width="100%">
+            </div><!--End Tooltip-->
+          </div>
+          <div class="jsadvanced skillitem" id="js-advanced" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
+            <div class="tooltip-js-advanced"><!--Tooltip-->
+            <span class="js-advanced-text"><span class="tultip"></span><br>JavaScript Skill level: Advanced</span>
+            <img src="./docs/assets/js-advanced-icon.png" width="100%">
+            </div><!--End Tooltip-->
+          </div>
+          <div class="sqlintermediate skillitem" id="sql-intermediate" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
+            <div class="tooltip-sql-intermediate"><!--Tooltip-->
+              <span class="sql-intermediate-text"><span class="tultip"></span><br>SQL Skill level: Intermediate</span>
+              <img src="./docs/assets/sql-intermediate-icon.png" width="100%">
+            </div><!--End Tooltip-->
+          </div>
+          <div class="sqladvanced skillitem" id="sql-advanced" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
+            <div class="tooltip-sql-advanced"><!--Tooltip-->
+              <span class="sql-advanced-text"><span class="tultip"></span><br>SQL Skill level: Advanced</span>
+              <img src="./docs/assets/sql-advanced-icon.png" width="100%">
+            </div><!--End Tooltip-->
+          </div>
+        </div><!--End Skill Tree-->
+      </div><!--skilltreecontainer end-->
+    </div><!--End ENTIRE Skill Container-->
+  <div class="skillbar-main-wrapper">
+    <div id="skillbarwrapper">
+      <h1>Skill Power</h1>
+      <span id="exceltexts">Excel VBA</span>
+      <div class="container1">
+        <div class="excel" id="skills5"></div>
+      </div>
+      <span id="htmltexts">HTML</span>
+      <div class="container1">
+        <div class="html" id="skills1"></div>
+      </div>
+      <span id="csstexts">CSS</span>
+      <div class="container1">
+        <div class="css" id="skills2"></div>
+      </div>
+      <span id="jstexts">JavaScript</span>
+      <div class="container1">
+        <div class="js" id="skills3"></div>
+      </div>
+      <span id="sqltexts">SQL</span>
+      <div class="container1">
+        <div class="sql" id="skills4"></div>
       </div>
     </div>
-  <div id="skilltreecontainer">
-    <div>
-      <h2>Skill List</h2>
-      <div id="snackbar4">
-      </div><!--End Website snackbar -->
-    </div>
-    <div class="skilltree" id="all-skill-list">
-      <div class="cssadvanced skillitem" id="css-advanced" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
-        <div class="tooltip-css-advanced"><!--Tooltip-->
-          <span class="css-advanced-text"><span class="tultip"></span><br>CSS Skill level: Advanced</span>
-          <img src="./docs/assets/css-advanced-icon.png" width="100%">
-        </div><!--End Tooltip-->
-      </div><!--css-advanced-->
-      <div class="htmladvanced skillitem" id="html-advanced" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
-        <div class="tooltip-html-advanced"><!--Tooltip-->
-          <span class="html-advanced-text"><span class="tultip"></span><br>HTML Skill level: Advanced</span>
-          <img src="./docs/assets/html-advanced-icon.png" width="100%">
-        </div><!--End Tooltip-->
-      </div>
-      <div class="jsintermediate skillitem" id="js-intermediate" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
-        <div class="tooltip-js-intermediate"><!--Tooltip-->
-        <span class="js-intermediate-text"><span class="tultip"></span><br>JavaScript Skill level: Intermediate</span>
-        <img src="./docs/assets/js-intermediate-icon.png" width="100%">
-        </div><!--End Tooltip-->
-      </div>
-      <div class="jsadvanced skillitem" id="js-advanced" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
-        <div class="tooltip-js-advanced"><!--Tooltip-->
-        <span class="js-advanced-text"><span class="tultip"></span><br>JavaScript Skill level: Advanced</span>
-        <img src="./docs/assets/js-advanced-icon.png" width="100%">
-        </div><!--End Tooltip-->
-      </div>
-      <div class="sqlintermediate skillitem" id="sql-intermediate" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
-        <div class="tooltip-sql-intermediate"><!--Tooltip-->
-          <span class="sql-intermediate-text"><span class="tultip"></span><br>SQL Skill level: Intermediate</span>
-          <img src="./docs/assets/sql-intermediate-icon.png" width="100%">
-        </div><!--End Tooltip-->
-      </div>
-      <div class="sqladvanced skillitem" id="sql-advanced" onclick="learnaskill(this)" onmouseover="requirementToolTip(this)">
-        <div class="tooltip-sql-advanced"><!--Tooltip-->
-          <span class="sql-advanced-text"><span class="tultip"></span><br>SQL Skill level: Advanced</span>
-          <img src="./docs/assets/sql-advanced-icon.png" width="100%">
-        </div><!--End Tooltip-->
-      </div>
-    </div><!--End Skill Tree-->
-  </div><!--skilltreecontainer end-->
-</div><!--End ENTIRE Skill Container-->
-<div id="skillbarwrapper">
-  <h1>Skill Power</h1>
-  <span id="exceltexts">Excel VBA</span>
-  <div class="container">
-    <div class="excel" id="skills5"></div>
   </div>
-  <span id="htmltexts">HTML</span>
-  <div class="container">
-    <div class="html" id="skills1"></div>
-  </div>
-  <span id="csstexts">CSS</span>
-  <div class="container">
-    <div class="css" id="skills2"></div>
-  </div>
-  <span id="jstexts">JavaScript</span>
-  <div class="container">
-    <div class="js" id="skills3"></div>
-  </div>
-  <span id="sqltexts">SQL</span>
-  <div class="container">
-    <div class="sql" id="skills4"></div>
-  </div>
-</div>
-  <div class="grid-container2">
-    <div class="contactme">
+  <div class="grid-container-2">
+    <div class="grid-item2">
       <br>
       <h3>Contact Me</h3>
       <br>
       <form  action="/save_data" target="_blank" method="get">
         <label for="ffname">First Name:</label><br>
-        <input type="text" id="ffname" name="ffname" size="25">
+        <input type="text" id="ffname" name="ffname" size="25" style="color:black">
         <br>
         <label for="flname">Last Name:</label><br>
-        <input type="text" id="flname" name="flname" size="25">
+        <input type="text" id="flname" name="flname" size="25" style="color:black">
         <br>
         <label for="fphone">Phone Number:</label><br>
-        <input type="text" id="fphone" name="fphone" size="25">
+        <input type="text" id="fphone" name="fphone" size="25" style="color:black">
         <br> 
         <label for="femail">Email Address:</label><br>
-        <input type="text" id="femail" name="femail" size="25">
+        <input type="text" id="femail" name="femail" size="25" style="color:black">
         <br><br>
         <label for="fproj">Job Interest: </label>
-        <select name="fproj" id="fproj">
+        <select name="fproj" id="fproj" style="color:black">
           <option value="Excel">Excel</option>
           <option value="Website">Website</option>
           <option value="SQL">SQL</option>
@@ -344,7 +353,7 @@
         </select>
         <br>
         <br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" style="color:black">
       </form>
     </div>
     <div class="grid-item2">
@@ -377,18 +386,19 @@
             </div>
           </div><!--grid-container closing div-->
     </div> <!-- grid-item2 closing div-->
-      <div class="grid-item2">          
-        <br>
-        <h2>Profile Links</h2><br>
-        <a href="https:/docs/assets/.google.com/document/d/1kCKRT-SVS099PuQcV2P1gJUxqBnm1PZb/edit?usp=share_link&ouid=103031430459850278951&rtpof=true&sd=true">Resume</a>
-        <a href="https://www.linkedin.com/in/zefiora/">LinkedIN</a>
-        <br><br><br><br>
-        <h2>Contact Information</h2><br>
-        Discord: Zefiora#4530<br><br>
-        Author: Matthew Barnes<br><br>
-        <a href="mailto:sakume@rocketmail.com" style="color:#F6F1F1">Sakume@Rocketmail.com</a>
-      </div>
+    <div class="grid-item2">          
+      <br>
+      <h2>Profile Links</h2><br>
+      <a href="https:/docs/assets/.google.com/document/d/1kCKRT-SVS099PuQcV2P1gJUxqBnm1PZb/edit?usp=share_link&ouid=103031430459850278951&rtpof=true&sd=true">Resume</a>
+      <a href="https://www.linkedin.com/in/zefiora/">LinkedIN</a>
+      <br><br><br><br>
+      <h2>Contact Information</h2><br>
+      Discord: Zefiora#4530<br><br>
+      Author: Matthew Barnes<br><br>
+      <a href="mailto:sakume@rocketmail.com" style="color:#F6F1F1">Sakume@Rocketmail.com</a>
+    </div>
   </div> 
+</div><!--new-mainwrapper end div-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="javascript\javascript-1.js"></script>
 </body>

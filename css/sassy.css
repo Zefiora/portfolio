@@ -1,7 +1,36 @@
 /*define variables for colors */
 @import url(https://fonts.googleapis.com/css?family=Play);
 body {
-  background-color: #141000 !important;
+  background-color: black !important;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  overflow: top !important;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 2px;
+  padding-left: 2px;
+  font-family: Play;
+  color: #F6F1F1;
+}
+
+.new-main-wrapper {
+  width: 100%;
+  background-color: #343152;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+.skillbar-main-wrapper {
+  width: 100%;
+  background-color: #343152;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  margin-top: 2px;
 }
 
 .grid-container {
@@ -9,14 +38,81 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   place-items: center;
+  width: 100%;
+}
+
+.grid-item {
+  width: auto;
+  height: auto;
+}
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  grid-gap: 2px;
+  margin-top: 2px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+.grid-item2 {
+  width: 100%;
+  height: auto;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  text-align: center;
+  background-color: #343152;
+  color: #F6F1F1;
+}
+
+.topbox99 {
+  width: 100%;
+  height: auto;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  background-color: #191825;
+  position: relative;
+  text-align: Center;
+  background-color: prime;
+  color: #F6F1F1;
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.navbar {
+  background-color: #343152;
+  width: 100%;
+  height: 50px;
+  border-width: px25;
+  border-color: black;
+  border-style: solid;
+  color: #F6F1F1;
 }
 
 /*Character title*/
+#character-profile-wrapper {
+  border-width: 2px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 100px 250px;
+  border-color: black;
+  border-style: solid;
+  grid-gap: 3px;
+}
+
 .charactername {
   display: grid;
-  grid-template-columns: 290px 50px 240px 120px 200px;
+  grid-template-columns: 1fr 50px 240px 1fr 1fr;
   grid-template-rows: 1fr;
   text-align: center;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
 }
 
 .lvl {
@@ -42,11 +138,26 @@ body {
   background-color: #141000;
   border-color: black;
   border-style: solid;
-  margin-top: 195px;
+  width: 100%;
 }
 
-/*End Character and Bio*/
-/* Attribute Values */
+#image-profiletext {
+  display: grid;
+  grid-template-columns: 200px;
+  grid-template-rows: 1fr 1fr;
+  grid-row-end: span 2;
+  font-size: 10px;
+}
+
+#mypic {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  margin-right: 2px;
+  height: auto;
+  width: 100%;
+}
+
 .availableattributes {
   display: grid;
   grid-template-columns: 200px 50px;
@@ -56,14 +167,24 @@ body {
   text-align: center;
 }
 
+#stat-bio-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 550px;
+  grid-template-rows: 1fr;
+  place-items: left;
+  text-align: center;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  margin-top: 2px;
+}
+
 .attributepoints {
   display: grid;
-  grid-template-columns: 200px 520px;
-  grid-template-rows: 100px;
-  place-items: center;
-  grid-gap: 150px;
-  padding-left: 30px;
-  text-align: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: left;
+  grid-gap: 15px;
 }
 
 .attr {
@@ -104,14 +225,25 @@ body {
 /* Skill Tree */
 #skillscontainer {
   display: grid;
-  grid-template-columns: 550px 550px;
-  grid-template-rows: 400px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  margin-top: 2px;
+  grid-gap: 2px;
+  width: 100%;
 }
 
 #skilltreecontainer {
   display: grid;
-  grid-template-columns: 260px;
-  grid-template-rows: 100px 50px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  padding-left: 5px;
 }
 
 .skillpoints {
@@ -122,45 +254,35 @@ body {
 
 #acquiredskillscontainer {
   display: grid;
-  grid-template-columns: 260px;
+  grid-template-columns: 1fr;
   grid-template-rows: 100px 50px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  padding-left: 5px;
+  width: 100%;
 }
 
 .skilltree {
   display: grid;
-  grid-template-columns: 50px 50px 50px;
-  grid-template-rows: 50px 50px 50px 50px 50px;
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-rows: 1fr 1fr 1fr;
   place-items: center;
   grid-gap: 10px;
+  width: 100%;
 }
 
 .skillitem {
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: auto;
   border-width: 1px;
   border-color: #3d3d3d;
   border-style: solid;
-  margin: 1px;
   text-align: center;
   place-items: center;
 }
 
 /* End Skill Tree */
-td {
-  background-color: #191825;
-}
-
-.grid-item {
-  width: 60%;
-  height: auto;
-}
-
-.grid-container2 {
-  display: grid;
-  grid-template-columns: 320px 450px 350px;
-  grid-template-rows: 1fr;
-}
-
 .Desc {
   font-size: 10px;
   font-style: italic;
@@ -168,59 +290,11 @@ td {
   text-align: center;
 }
 
-.grid-item2 {
-  width: auto;
-  height: auto;
-  border-width: px25;
-  border-color: black;
-  border-style: solid;
-  text-align: center;
-  background-color: #191825;
-  color: #F6F1F1;
-  margin: 5px;
-}
-
-.options {
-  color: #F6F1F1;
-  background-color: #191825;
-}
-
 .classes {
   color: #F6F1F1;
   background-color: #191825;
   position: relative;
   height: 50%;
-}
-
-.tbl {
-  border-width: px25;
-  border-color: black;
-  border-style: solid;
-  width: 900px;
-  border-collapse: collapse;
-  margin: 6px;
-}
-
-.contactme {
-  background-color: #191825;
-  color: #F6F1F1;
-  width: auto;
-  height: auto;
-  border-width: px25;
-  border-color: black;
-  border-style: solid;
-  margin: 5px;
-}
-
-* {
-  box-sizing: border-box;
-  padding-top: 2px;
-  padding-right: 2px;
-  padding-bottom: 2px;
-  padding-left: 2px;
-  font-family: Play;
-  overflow: top !important;
-  color: #F6F1F1;
 }
 
 a {
@@ -234,35 +308,6 @@ h4 {
 
 p span {
   display: block;
-}
-
-.topbox {
-  width: 1px;
-  height: 150px;
-  background-color: #141000;
-  position: relative;
-  border-width: px200 px25;
-  border-color: black;
-  border-style: solid;
-  color: black;
-  text-align: Center;
-  background-color: #141000;
-  left: 0px;
-  width: 1100px;
-  height: 90px;
-  color: #F6F1F1;
-  font-size: 20px;
-}
-
-.navbar {
-  background-color: #191825;
-  width: 1110px;
-  height: 60px;
-  border-width: px25;
-  border-color: black;
-  border-style: solid;
-  color: #F6F1F1;
-  margin: 5px;
 }
 
 .dropdown-item {
@@ -279,13 +324,8 @@ p span {
 }
 
 @supports (display: flex) {
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 800px) {
     article {
-      display: flex;
-    }
-    .grid-container2 {
-      grid-template-columns: 100%;
-      grid-template-rows: 1fr 1fr 1fr;
       display: flex;
     }
     .navbar {
@@ -308,6 +348,14 @@ p span {
   }
 }
 #vbabttn {
+  background-color: black;
+  border-width: px200 px25;
+  border-color: #F6F1F1;
+  border-style: solid;
+  border-radius: 5%;
+}
+
+#webprojectbttn {
   background-color: black;
   border-width: px200 px25;
   border-color: #F6F1F1;
@@ -501,7 +549,6 @@ p span {
 .tooltipp {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltipp .tooltiptext {
@@ -529,7 +576,6 @@ p span {
 .tooltipp2 {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltipp2 .tooltiptext2 {
@@ -554,18 +600,30 @@ p span {
   opacity: 1;
 }
 
-#exp {
-  border-width: px25;
+#exp99 {
+  border-width: 2px;
   border-color: black;
   border-style: solid;
   width: 100%;
   border-collapse: collapse;
   font-family: Play;
-  height: 60px;
+  height: auto;
+}
+
+.expwrapper {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 #exp-bar {
   text-align: center;
+}
+
+.vbabttndisabler {
+  visibility: hidden;
 }
 
 .exp-bar-25 {
@@ -746,7 +804,7 @@ p span {
   to {
     width: 100%;
     position: relative;
-    background: #191825;
+    background: #343152;
     -webkit-filter: blur(0px);
   }
 }
@@ -760,7 +818,7 @@ p span {
   to {
     width: 100%;
     position: relative;
-    background: #191825;
+    background: #343152;
     -webkit-filter: blur(0px);
   }
 }
@@ -774,7 +832,7 @@ p span {
   to {
     width: 100%;
     position: relative;
-    background: #191825;
+    background: #343152;
     -webkit-filter: blur(0px);
   }
 }
@@ -788,23 +846,25 @@ p span {
   to {
     width: 100%;
     position: relative;
-    background: #191825;
+    background: #343152;
     -webkit-filter: blur(0px);
   }
 }
 #skillbarwrapper {
-  width: 1115px;
+  width: 100%;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.container {
+.container1 {
   width: 100%;
-  background-color: #191825;
+  background-color: #343152;
   border-color: black;
   border-style: solid;
+  border-width: 1px;
+  background-color: #424242;
 }
 
 #skills1 {
@@ -926,7 +986,6 @@ p span {
 .tooltip-css-beginner {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-css-beginner .css-beginner-text {
@@ -941,7 +1000,6 @@ p span {
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: 0px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -954,7 +1012,6 @@ p span {
 .tooltip-css-intermediate {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-css-intermediate .css-intermediate-text {
@@ -969,7 +1026,6 @@ p span {
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: 0px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -982,7 +1038,6 @@ p span {
 .tooltip-css-advanced {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-css-advanced .css-advanced-text {
@@ -997,7 +1052,6 @@ p span {
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: 0px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -1010,7 +1064,6 @@ p span {
 .tooltip-html-beginner {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-html-beginner .html-beginner-text {
@@ -1025,7 +1078,6 @@ p span {
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: 0px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -1038,7 +1090,6 @@ p span {
 .tooltip-html-intermediate {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-html-intermediate .html-intermediate-text {
@@ -1053,7 +1104,6 @@ p span {
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: 0px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -1066,7 +1116,6 @@ p span {
 .tooltip-html-advanced {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-html-advanced .html-advanced-text {
@@ -1081,7 +1130,6 @@ p span {
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: 0px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -1094,7 +1142,6 @@ p span {
 .tooltip-js-beginner {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-js-beginner .js-beginner-text {
@@ -1109,7 +1156,6 @@ p span {
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: 0px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -1122,7 +1168,6 @@ p span {
 .tooltip-js-intermediate {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-js-intermediate .js-intermediate-text {
@@ -1137,7 +1182,6 @@ p span {
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: 0px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -1150,7 +1194,6 @@ p span {
 .tooltip-js-advanced {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-js-advanced .js-advanced-text {
@@ -1165,7 +1208,6 @@ p span {
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: 0px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -1178,7 +1220,6 @@ p span {
 .tooltip-excel-beginner {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-excel-beginner .excel-beginner-text {
@@ -1193,7 +1234,6 @@ p span {
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: 0px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -1206,7 +1246,6 @@ p span {
 .tooltip-excel-intermediate {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-excel-intermediate .excel-intermediate-text {
@@ -1221,7 +1260,6 @@ p span {
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: 0px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -1234,7 +1272,6 @@ p span {
 .tooltip-excel-advanced {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-excel-advanced .excel-advanced-text {
@@ -1249,7 +1286,6 @@ p span {
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: 0px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -1262,7 +1298,6 @@ p span {
 .tooltip-sql-beginner {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-sql-beginner .sql-beginner-text {
@@ -1277,7 +1312,6 @@ p span {
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: 0px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -1290,7 +1324,6 @@ p span {
 .tooltip-sql-intermediate {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-sql-intermediate .sql-intermediate-text {
@@ -1305,7 +1338,6 @@ p span {
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: 0px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -1318,7 +1350,6 @@ p span {
 .tooltip-sql-advanced {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-sql-advanced .sql-advanced-text {
@@ -1333,7 +1364,6 @@ p span {
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: 0px;
   opacity: 0;
   transition: opacity 0.3s;
 }
