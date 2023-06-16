@@ -84,9 +84,6 @@ function expbar() {
         document.getElementById("exp-bar").innerText = 100;
         expbarprogress();
         myFunction3();
-    //} else if (document.getElementById("level").innerText == 45) {
-    //    document.getElementById("vbabttn").setAttribute("class", "vbabttndisabler");
-     //   document.getElementById("tltp").setAttribute("class", "vbabttndisabler");
     } else {
         if(document.getElementById("exp-bar").innerText == 100){
             document.getElementById("exp-bar").innerText = 25;
