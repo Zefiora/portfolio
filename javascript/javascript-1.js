@@ -485,8 +485,8 @@ var htmlproject = new project("Html Project", "htmlproject", "excelwizard", 3000
 var cssproject = new project("CSS Project", "cssproject", "excelwizard", 6000, "cssadvanced", 43, 16000, 10000, 8000, 10000);
 var classchangehtmlcsswizard = new project("Class Change HtmlCSS Wizard", "classchangehtmlcsswizard", "excelwizard", 50000, "cssadvanced", 44, 18000, 16500, 8000, 16500);
 
-var jscourse = new project("JavaScript Course", "jscourse", "htmlcsswizard", 40000, "jsbeginner", 46, 18000, 18000, 8000, 18000);
-var jsproject = new project("JavaScript Project", "jsproject", "javascriptwizard", 30000, "jsintermediate" ,46, 18000, 15000, 8000, 15000);
+var jscourse = new project("JavaScript Course", "jscourse", "htmlcsswizard", 40000, "jsbeginner", 45, 18000, 18000, 8000, 18000);
+var jsproject = new project("JavaScript Project", "jsproject", "htmlcsswizard", 30000, "jsintermediate" ,45, 18000, 15000, 8000, 15000);
 var classchangejavascriptwizard = new project("Class Change JavaScript Wizard", "classchangejavascriptwizard", "htmlcsswizard", 100000, "jsadvanced", 46, 18000, 20000, 8000, 20000);
 
 var sqlcourse = new project("SQL Course", "sqlcourse", "javascriptwizard", 150000, "sqlbeginner", 48, 18000, 2000, 8000, 2000);
