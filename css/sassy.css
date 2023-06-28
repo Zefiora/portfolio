@@ -1,5 +1,10 @@
 /*define variables for colors */
 @import url(https://fonts.googleapis.com/css?family=Play);
+:root {
+  --widths: 25%;
+  --widthmin: 0%;
+}
+
 body {
   background-color: black !important;
   width: 100%;
@@ -132,15 +137,6 @@ body {
   top: 10%;
 }
 
-.bio {
-  font-style: italic;
-  font-size: 13px;
-  background-color: #141000;
-  border-color: black;
-  border-style: solid;
-  width: 100%;
-}
-
 #image-profiletext {
   display: grid;
   grid-template-columns: 200px;
@@ -169,9 +165,8 @@ body {
 
 #stat-bio-wrapper {
   display: grid;
-  grid-template-columns: 1fr 550px;
+  grid-template-columns: 1fr 600px;
   grid-template-rows: 1fr;
-  place-items: left;
   text-align: center;
   border-width: 1px;
   border-color: black;
@@ -222,6 +217,80 @@ body {
 }
 
 /* End Attribute Values */
+#new-stat-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  font-size: 15px;
+  background-color: #191825;
+  border-color: black;
+  border-style: solid;
+  width: 100%;
+}
+
+#class-stat-id {
+  align-self: center;
+  font-size: 18px;
+}
+
+#psa-wrapper {
+  align-self: baseline;
+  font-size: 16px;
+}
+
+#power, #power-value {
+  display: inline;
+}
+
+#power, #speed, #accuracy, #power-value, #speed-value, #accuracy-value {
+  display: inline;
+}
+
+#problemsolving-wrapper {
+  display: inline;
+  grid-column-end: span 2;
+}
+
+#problemsolving, #problemsolving-value {
+  display: inline;
+}
+
+#retention-wrapper, #comprehension-wrapper {
+  display: inline-block;
+}
+
+#retention, #retention-value {
+  display: inline;
+}
+
+#comprehension, #comprehension-value {
+  display: inline;
+}
+
+#resolve-wrapper, #technique-wrapper {
+  display: inline;
+}
+
+#resolve, #resolve-value {
+  display: inline;
+}
+
+#technique, #technique-value {
+  display: inline;
+}
+
+#precision-wrapper, #speed2-wrapper {
+  display: inline;
+}
+
+#precision, #precision-value {
+  display: inline;
+}
+
+#speed2, #speed2-value {
+  display: inline;
+}
+
 /* Skill Tree */
 #skillscontainer {
   display: grid;
@@ -347,20 +416,39 @@ p span {
     }
   }
 }
-#vbabttn {
-  background-color: black;
-  border-width: px200 px25;
-  border-color: #F6F1F1;
+.expwrapper {
+  border-width: 2px;
+  border-color: black;
   border-style: solid;
-  border-radius: 5%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
-#webprojectbttn {
-  background-color: black;
-  border-width: px200 px25;
+.bttn {
+  background-color: #000000;
+  border-color: #dbdbdb;
   border-color: #F6F1F1;
-  border-style: solid;
-  border-radius: 5%;
+}
+
+.bttn.disabled {
+  background-color: #353535;
+  cursor: not-allowed;
+  border-color: #949494;
+}
+
+.dis-permanent {
+  background-color: #7a7a7a;
+  cursor: not-allowed;
+  border-color: #cccccc;
+  color: black !important;
+}
+
+.excelproject {
+  font-size: 15px;
 }
 
 #classchange {
@@ -372,14 +460,6 @@ p span {
   font-size: 10px;
   padding-left: 45px;
   padding-right: 45px;
-}
-
-#webbttn {
-  background-color: black;
-  border-width: px200 px25;
-  border-color: #F6F1F1;
-  border-style: solid;
-  border-radius: 5%;
 }
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
@@ -504,6 +584,30 @@ p span {
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
+#snackbar-sp {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 150px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar-sp.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
 /* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadein {
   from {
@@ -573,12 +677,12 @@ p span {
   opacity: 1;
 }
 
-.tooltipp2 {
+.tooltipp-pro {
   position: relative;
   display: inline-block;
 }
 
-.tooltipp2 .tooltiptext2 {
+.tooltipp-pro .tooltiptext-pro {
   visibility: hidden;
   width: 200px;
   background-color: #555;
@@ -595,7 +699,35 @@ p span {
   transition: opacity 0.3s;
 }
 
-.tooltipp2:hover .tooltiptext2 {
+.tooltipp-pro:hover .tooltiptext-pro {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltipp-cc {
+  position: relative;
+  display: block;
+}
+
+.tooltipp-cc .tooltiptext-cc {
+  visibility: hidden;
+  width: 125%;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  font-size: medium;
+  border-radius: 6px;
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltipp-cc:hover .tooltiptext-cc {
   visibility: visible;
   opacity: 1;
 }
@@ -610,235 +742,59 @@ p span {
   height: auto;
 }
 
-.expwrapper {
-  border-width: 2px;
-  border-color: black;
-  border-style: solid;
-  margin-top: 2px;
-  margin-bottom: 2px;
+#currentxp, #slash, #requiredxp {
+  display: inline;
 }
 
 #exp-bar {
   text-align: center;
 }
 
-.vbabttndisabler {
-  visibility: hidden;
-}
-
-.exp-bar-25 {
-  width: 0%;
-  animation-name: exp-bar-25, exp-bar-glow-25;
-  animation-duration: 4s;
+.exp-bar-test1 {
+  width: var(--widthmin);
+  animation-name: exp-bar-test1, exp-bar-glow-test1;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
   animation-delay: 0s, 0s;
 }
 
-.exp-bar-50 {
-  width: 50%;
-  animation-name: exp-bar-50, exp-bar-glow-50;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
-  animation-delay: 0s, 0s;
-}
-
-.exp-bar-75 {
-  width: 75%;
-  animation-name: exp-bar-75, exp-bar-glow-75;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
-  animation-delay: 0s, 0s;
-}
-
-.exp-bar-100 {
-  width: 100%;
-  animation-name: exp-bar-100, exp-bar-glow-100;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
-  animation-delay: 0s, 0s;
-}
-
-@keyframes exp-bar-glow-25 {
+@keyframes exp-bar-glow-test1 {
   from {
-    width: 0%;
+    width: var(--widthmin);
     position: relative;
     background: #fff;
     -webkit-filter: blur(2px);
   }
   to {
-    width: 25%;
+    width: var(--widths);
     position: relative;
     background: #46d4ff;
     -webkit-filter: blur(0px);
   }
 }
-@keyframes exp-bar-glow-50 {
+@keyframes exp-bar-test1 {
   from {
-    width: 25%;
-    position: relative;
-    background: #fff;
-    -webkit-filter: blur(2px);
-  }
-  to {
-    width: 50%;
-    position: relative;
-    background: #3db9d8;
-    -webkit-filter: blur(0px);
-  }
-}
-@keyframes exp-bar-glow-75 {
-  from {
-    width: 50%;
-    position: relative;
-    background: #fff;
-    -webkit-filter: blur(2px);
-  }
-  to {
-    width: 75%;
-    position: relative;
-    background: #46d4ff;
-    -webkit-filter: blur(0px);
-  }
-}
-@keyframes exp-bar-glow-100 {
-  from {
-    width: 75%;
-    position: relative;
-    background: #fff;
-    -webkit-filter: blur(2px);
-  }
-  to {
-    width: 100%;
-    position: relative;
-    background: #46d4ff;
-    -webkit-filter: blur(0px);
-  }
-}
-@keyframes exp-bar-25 {
-  from {
-    width: 0%;
+    width: var(--widthmin);
     background-color: #46d4ff;
     height: 25px;
   }
   to {
-    width: 25%;
+    width: var(--widths);
     background-color: #46d4ff;
     height: 25px;
   }
 }
-@keyframes exp-bar-50 {
-  from {
-    width: 25%;
-    background-color: #46d4ff;
-    height: 25px;
-  }
-  to {
-    width: 50%;
-    background-color: #46d4ff;
-    height: 25px;
-  }
-}
-@keyframes exp-bar-75 {
-  from {
-    width: 50%;
-    background-color: #46d4ff;
-    height: 25px;
-  }
-  to {
-    width: 75%;
-    background-color: #46d4ff;
-    height: 25px;
-  }
-}
-@keyframes exp-bar-100 {
-  from {
-    width: 75%;
-    background-color: #46d4ff;
-    height: 25px;
-  }
-  to {
-    width: 100%;
-    background-color: #46d4ff;
-    height: 25px;
-  }
-}
-.exp-bar-test-25 {
-  width: 0%;
-  animation-name: exp-bar-test-anime-25;
+.exp-bar-test-test1 {
+  width: var(--widthmin);
+  animation-name: exp-bar-test-anime-test1;
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-delay: 0s;
 }
 
-.exp-bar-test-50 {
-  width: 0%;
-  animation-name: exp-bar-test-anime-50;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-delay: 0s;
-}
-
-.exp-bar-test-75 {
-  width: 0%;
-  animation-name: exp-bar-test-anime-75;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-delay: 0s;
-}
-
-.exp-bar-test-100 {
-  width: 0%;
-  animation-name: exp-bar-test-anime-100;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-delay: 0s;
-}
-
-@keyframes exp-bar-test-anime-25 {
+@keyframes exp-bar-test-anime-test1 {
   from {
-    width: 0%;
-    position: relative;
-    background: #fff;
-    -webkit-filter: blur(2px);
-  }
-  to {
-    width: 100%;
-    position: relative;
-    background: #343152;
-    -webkit-filter: blur(0px);
-  }
-}
-@keyframes exp-bar-test-anime-50 {
-  from {
-    width: 25%;
-    position: relative;
-    background: #fff;
-    -webkit-filter: blur(2px);
-  }
-  to {
-    width: 100%;
-    position: relative;
-    background: #343152;
-    -webkit-filter: blur(0px);
-  }
-}
-@keyframes exp-bar-test-anime-75 {
-  from {
-    width: 50%;
-    position: relative;
-    background: #fff;
-    -webkit-filter: blur(2px);
-  }
-  to {
-    width: 100%;
-    position: relative;
-    background: #343152;
-    -webkit-filter: blur(0px);
-  }
-}
-@keyframes exp-bar-test-anime-100 {
-  from {
-    width: 75%;
+    width: var(--widthmin);
     position: relative;
     background: #fff;
     -webkit-filter: blur(2px);

@@ -52,24 +52,97 @@
 </nav>
 <div class="new-main-wrapper">
         <div class="topbox99">
-          Help Matthew reach his full potential, level him up, apply attribute points and unlock skills. <br>Then help him class change into a supreme wizard!
+          Help Matthew reach his full potential, work your way through the projects to level him up, apply attribute points, and unlock skills.<br>Then help him class change into a supreme wizard and take on the final bos..Project!
         </div>
         <div id="exp99">Experience Bar
           <div id="exp2">
-            <div id="exp-bar">
-              0
-            </div><!--exp-bar-->
+            <div id="exp-bar"></div><!--exp-bar-->
+            <div id="requiredxpwrapper">
+              <div id="currentxp">0</div>
+              <div id="slash">/</div>
+              <div id="requiredxp">3000</div>
+            </div>
           </div>
         </div><!--exp-->
     <div class="expwrapper">
-      <div class="tooltipp" id="tltp"><!--Tooltip-->
-        <span class="tooltiptext">Click here to start a project and get Matthew the Exp he needs to level up! You will also gain a skill point!</span>
-        <button id="vbabttn" class="" onclick="myFunction(); expbar();">Complete a Project</button><!-- Use a button to open the snackbar -->
-      </div><!--End Tooltip-->
-      <div id="snackbar"><p><span>Project Completed!</span><span>Earned Exp - 1,000</span><span>Earned 1 Skill Point</span></p>
-      </div><!-- End VBA snackbar -->
+        <button id="bttn-excelproject" class="excelproject bttn" onmouseover="projectButtonToolTip(this)" onclick="checkReq(this)">
+        <div class="tooltipp-pro">
+          <span class="tooltiptext-pro"><span class="tultip-pro"></span></span>
+          Excel Project - 
+          <img src="./docs/assets/excel-advanced-icon.png" width="40px">
+        </div>
+        <button id="bttn-htmlcourse" class="htmlcourse bttn" onmouseover="projectButtonToolTip(this)" onclick="checkReq(this)">
+          <div class="tooltipp-pro">
+            <span class="tooltiptext-pro"><span class="tultip-pro"></span></span>
+          HTML Course - 
+          <img src="./docs/assets/html-intermediate-icon.png" width="40px">
+          </div>
+        <button id="bttn-csscourse" class="csscourse bttn" onmouseover="projectButtonToolTip(this)" onclick="checkReq(this)">
+          <div class="tooltipp-pro">
+            <span class="tooltiptext-pro"><span class="tultip-pro"></span></span>
+          CSS Course - 
+          <img src="./docs/assets/css-intermediate-icon.png" width="40px">
+          </div>
+        <button id="bttn-htmlproject" class="htmlproject bttn" onmouseover="projectButtonToolTip(this)" onclick="checkReq(this)">
+          <div class="tooltipp-pro">
+            <span class="tooltiptext-pro"><span class="tultip-pro"></span></span>
+          HTML Project - 
+          <img src="./docs/assets/html-advanced-icon.png" width="40px">
+          </div>
+        <button id="bttn-cssproject" class="cssproject bttn" onmouseover="projectButtonToolTip(this)" onclick="checkReq(this)">
+          <div class="tooltipp-pro">
+            <span class="tooltiptext-pro"><span class="tultip-pro"></span></span>
+          CSS Project - 
+          <img src="./docs/assets/css-advanced-icon.png" width="40px">
+          </div>
+        <button id="bttn-classchangehtmlcsswizard" class="classchangehtmlcsswizard bttn" onmouseover="projectButtonToolTip(this)" onclick="checkReq(this)">
+          <div class="tooltipp-pro">
+            <span class="tooltiptext-pro"><span class="tultip-pro"></span></span>
+          Major Project - 
+          <img src="./docs/assets/html-css-advanced-icon.png" width="40px">
+          </div>
+        <button id="bttn-jscourse" class="jscourse bttn" onmouseover="projectButtonToolTip(this)" onclick="checkReq(this)">
+          <div class="tooltipp-pro">
+            <span class="tooltiptext-pro"><span class="tultip-pro"></span></span>
+          JavaScript Course - 
+          <img src="./docs/assets/js-intermediate-icon.png" width="40px">
+          </div>
+        <button id="bttn-jsproject" class="jsproject bttn" onmouseover="projectButtonToolTip(this)" onclick="checkReq(this)">
+          <div class="tooltipp-pro">
+            <span class="tooltiptext-pro"><span class="tultip-pro"></span></span>
+          JavaScript Project - 
+          <img src="./docs/assets/js-intermediate-icon.png" width="40px">
+          </div>
+          <button id="bttn-classchangejavascriptwizard" class="classchangejavascriptwizard bttn" onmouseover="projectButtonToolTip(this)" onclick="checkReq(this)">
+            <div class="tooltipp-pro">
+              <span class="tooltiptext-pro"><span class="tultip-pro"></span></span>
+            Major Project - 
+            <img src="./docs/assets/html-css-js-advanced-icon.png" width="40px">
+            </div>
+        <button id="bttn-sqlcourse" class="sqlcourse bttn" onmouseover="projectButtonToolTip(this)" onclick="checkReq(this)">
+          <div class="tooltipp-pro">
+            <span class="tooltiptext-pro"><span class="tultip-pro"></span></span>
+          SQL Course - 
+          <img src="./docs/assets/sql-intermediate-icon.png" width="40px">
+          </div>
+        <button id="bttn-sqlproject" class="sqlproject bttn" onmouseover="projectButtonToolTip(this)" onclick="checkReq(this)">
+          <div class="tooltipp-pro">
+            <span class="tooltiptext-pro"><span class="tultip-pro"></span></span>
+          SQL Project - 
+          <img src="./docs/assets/sql-intermediate-icon.png" width="40px">
+          </div>
+        <button id="bttn-classchangesupremewizard" class="classchangesupremewizard bttn" onmouseover="projectButtonToolTip(this)" onclick="checkReq(this)">
+          <div class="tooltipp-pro">
+            <span class="tooltiptext-pro"><span class="tultip-pro"></span></span>
+          Major Project - 
+          <img src="./docs/assets/sql-advanced-icon.png" width="40px">
+          </div>
+      <div id="snackbar"><p><span>Project Completed!</span><span id="earnedexpvalue">Earned Exp - </span></p>
+      </div><!--snackbar-->
+      <div id="snackbar-sp"><p><span>You have leveled up!</span><span>Earned 5 Attribute Point</span><span>Earned 1 Skill Point</span></p>
+      </div><!--snackbar-sp -->
         <div id="snackbar3"><p><span>You have reached the max level of 50!</span><span>Earned Exp - 0</span></p>
-        </div><!--End Website snackbar -->
+        </div><!--snackbar3-->
     </div><!--End expwrapper-->
         <div id="character-profile-wrapper">
           <div id="image-profiletext">
@@ -80,22 +153,19 @@
                   <h4 class="nameandlevel">Matthew Barnes - Level </h4>
                   <h3><img src="./docs/assets/goldframe.png" width="100%"><div class="lvl" id="level">41</div></h3>
                   <h3>
-                    <div class="excelwizard" id="matthewclass"  onmouseout="mouseOut(this)">
-                    Excel Wizard
-                    </div>
+
+                <div class="excelwizard" id="matthewclass" onmouseover="classChangeToolTip(this)">
+                    <div class="tooltipp-cc" id="tltp"><!--Tooltip-->
+                    <span class="tooltiptext-cc"><span class="tultip2" id="cctooltip"></span></span>
+                <div id="classtext">Excel Wizard</div>
+                    </div> 
+                </div>
                     <button id="classchange" onclick="classchangewizard()">
                       Class Change
                     </button>
                     <div id="snackbar5">
                     </div><!--End Website snackbar -->
                   </h3>
-              <label for="sclass">Class Requirements: </label>
-              <select name="sclass" class="classes" id="class-select" onmouseout="mouseOut(this)">
-                <option value="excel" class="options">Excel Wizard</option>
-                <option value="htmlcss" class="options">HTML/CSS Wizard</option>
-                <option value="jswiz" class="options">JavaScript Wizard</option>
-                <option value="superwiz" class="options">Supreme Wizard</option>
-              </select>
           </div><!--End Character Name-->
           <div id="stat-bio-wrapper">
             <div class="attributepoints">
@@ -103,17 +173,22 @@
                   <div>
                     <h4>Attribute Points</h4>
                   </div><!--Text Attribute points-->
-                <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+              <div class="tooltipp" id="tltp"><!--Tooltip-->
+              <span class="tooltiptext">Available attribute points to spend.</span>
+                <div class="attributeitem">
                   <div class="attr attrpoints">
                   Points
                   </div>
                   <div class="attrvalue attrpoints" id="availableattrpoints">
-                    9
+                    0
                   </div><!--End Attribute Value-->
                 </div><!-- End Attribute Item-->
+              </div>
               </div><!--"availableattributes"-->
               <div class="attributelist">
-                <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseClick(this)">
+              <div class="tooltipp" id="tltp"><!--Tooltip-->
+              <span class="tooltiptext">Intelligence:<p> A measurement of one’s ability to learn quickly and problem solve issues.</p></span>
+                <div class="attributeitem" onclick="mouseClick(this)">
                   <div class="attr">
                   Int
                   </div>
@@ -121,7 +196,10 @@
                     9
                   </div><!--End Attribute Value-->
                 </div><!-- End Attribute Item-->
-                <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"  onclick="mouseClick(this)">
+              </div>
+              <div class="tooltipp" id="tltp"><!--Tooltip-->
+              <span class="tooltiptext">Wisdom:<p> A measurement of one’s ability to retain information over time and overall comprehension of material.</p></span>
+                <div class="attributeitem" onclick="mouseClick(this)">
                   <div class="attr">
                     Wis
                   </div>
@@ -129,7 +207,10 @@
                     7
                   </div><!--End Attribute Value-->
                 </div><!-- End Attribute Item-->
-                <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"  onclick="mouseClick(this)">
+              </div>
+              <div class="tooltipp" id="tltp"><!--Tooltip-->
+              <span class="tooltiptext">Constitution:<p> A measurement of one’s ability to fight through difficult situations, even when under pressure.</p></span>
+                <div class="attributeitem" onclick="mouseClick(this)">
                   <div class="attr">
                     Con
                   </div>
@@ -137,7 +218,10 @@
                     5
                   </div><!--End Attribute Value-->
                 </div><!-- End Attribute Item-->
-                <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"  onclick="mouseClick(this)">
+              </div>
+              <div class="tooltipp" id="tltp"><!--Tooltip-->
+              <span class="tooltiptext">Technique:<p> A measurement of one’s technical skill and general knowledge of information technology.</p></span>
+                <div class="attributeitem" onclick="mouseClick(this)">
                   <div class="attr">
                     Tech
                   </div>
@@ -145,7 +229,10 @@
                     7
                   </div><!--End Attribute Value-->
                 </div><!-- End Attribute Item-->
-                <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"  onclick="mouseClick(this)">
+              </div>
+              <div class="tooltipp" id="tltp"><!--Tooltip-->
+              <span class="tooltiptext">Dexterity:<p> A measurement of one’s ability to pivot when a wrench is thrown into the mix, no matter how big or small the project gets done with precision.</p></span>
+                <div class="attributeitem" onclick="mouseClick(this)">
                   <div class="attr">
                     Dex
                   </div>
@@ -153,7 +240,10 @@
                     5
                   </div><!--End Attribute Value-->
                 </div><!-- End Attribute Item-->
-                <div class="attributeitem" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"  onclick="mouseClick(this)">
+              </div>
+              <div class="tooltipp" id="tltp"><!--Tooltip-->
+              <span class="tooltiptext">Agility:<p> A measurement of one’s ability to research and build code quickly.</p></span>
+                <div class="attributeitem" onclick="mouseClick(this)">
                   <div class="attr">
                     Agi
                   </div>
@@ -161,16 +251,71 @@
                     5
                   </div><!--End Attribute Value-->
                 </div><!-- End Attribute Item-->
+              </div>
               </div><!--End Attribute List 2-->
             </div><!-- attributepoints end-->
-            <div class="bio" id="tooltiper">
-              <p>Matthew was born in Kansas, and raised in Florida. He went to school at Saint Augustine High School, and spent another two years completing a graphic arts class for a certificate in media art. Currently enrolled in the Correlation-One font end web developer class.
-              </p>
-              <p>
-                His first job was an Assistant Art Director at David Dobbs Menu Design, followed by several retail jobs such as Krogars, a management role at a resturant, and finally a tier 1 entry job at Amazon. Here at Amazon he quickly developed into a strong leader
-                and problem solver. Several promotions later, Matthew has become a Data and Reporting Analyst and studies Excel VBA and SQL.
-              </p>
-            </div><!--End Bio-->
+            <div id="new-stat-wrapper">
+            <div id="class-stat-id" class="excelwizard">Excel Wizard</div>
+              <div id="psa-wrapper">
+                <div id="power">Project Power:</div>
+                <div id="power-value">0</div>
+                <div id="speed">Project Speed:</div>
+                <div id="speed-value">0</div>
+                <div id="accuracy">Project Accuracy:</div>
+                <div id="accuracy-value">0</div>
+              </div><!--psa-wrapper-end-->
+                <div id="I-W-C-T-D-A-wrapper">
+                  <div id="problemsolving-wrapper">
+                    <div id="problemsolving">
+                    Problem Solving:
+                    </div>
+                    <div id="problemsolving-value">
+                    </div>
+                  </div>
+                  <div id="retention-wrapper">
+                    <div id="retention">
+                    Retention:
+                    </div>
+                    <div id="retention-value">
+                    </div>
+                  </div>
+                  <div id="comprehension-wrapper">
+                    <div id="comprehension">
+                    Comprehension:
+                    </div>
+                    <div id="comprehension-value">
+                    </div>
+                  </div>
+                  <div id="resolve-wrapper">
+                    <div id="resolve">
+                    Resolve:
+                    </div>
+                    <div id="resolve-value">
+                    </div>
+                  </div>
+                  <div id="technique-wrapper">
+                    <div id="technique">
+                    Technique:
+                    </div>
+                    <div id="technique-value">
+                    </div>
+                  </div>
+                  <div id="precision-wrapper">
+                    <div id="precision">
+                    Precision:
+                    </div>
+                    <div id="precision-value">
+                    </div>
+                  </div>
+                  <div id="speed2-wrapper">
+                    <div id="speed2">
+                    Speed:
+                    </div>
+                    <div id="speed2-value">
+                    </div>
+                  </div>
+                </div><!--I-W-C-T-D-A-wrapper-end-->
+            </div><!--new-stat-wrapper-end-->
           </div><!--stat-bio-wrapper end-->
         </div><!--character-profile-wrapper end-->
     <div id="skillscontainer"><!--Main Container for skills-->
@@ -186,7 +331,7 @@
                   SP
                   </div>
                   <div class="attrvalue" id="sp">
-                  0
+                  1
                   </div>
             </div><!--attributeitem-->
           </div><!--availableskillpoints-->
