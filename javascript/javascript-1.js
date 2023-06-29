@@ -539,7 +539,7 @@ function checkReq(importedclass){
                         } else {
                             completedProjectList.push(projectPick);
                         }
-                    disableProjectOrCourse(projectPick);
+                    //disableProjectOrCourse(projectPick);
                     cooldowns(projectPick);
                     expbar(projectlist[i].Expgranted)
                     
@@ -566,11 +566,42 @@ function cooldowns(projectPick) {
             };
             if (ProjName == projectPick) {
                 var x = document.getElementById("bttn-" + projectPick);
-                x.disabled = true;
-                x.classList.add("disabled");
-                setTimeout(function(){ x.className = x.className.replace("disabled", ""); 
-                x.disabled = false;
-                    },  timeOutReduction(ProSpeedReq, ProTimeOut));
+                switch (ProjName) {
+                    case "htmlcourse":
+                        x.classList.add("dis-permanent");
+                        x.disabled = true;
+                        break;
+                    case "csscourse":
+                        x.classList.add("dis-permanent");
+                        x.disabled = true;
+                        break;
+                    case "classchangehtmlcsswizard":
+                        x.classList.add("dis-permanent");
+                        x.disabled = true;
+                        break;
+                    case "jscourse":
+                        x.classList.add("dis-permanent");
+                        x.disabled = true;
+                        break;
+                    case "classchangejavascriptwizard":
+                        x.classList.add("dis-permanent");
+                        x.disabled = true;
+                        break;
+                    case "sqlcourse":
+                        x.classList.add("dis-permanent");
+                        x.disabled = true;
+                        break;
+                    case "classchangesupremewizard":
+                        x.classList.add("dis-permanent");
+                        x.disabled = true;
+                        break;
+                    default:
+                        x.disabled = true;
+                        x.classList.add("disabled");
+                        setTimeout(function(){ x.className = x.className.replace("disabled", ""); 
+                        x.disabled = false;
+                            },  timeOutReduction(ProSpeedReq, ProTimeOut));
+                    } 
             };
         };
     };
@@ -587,6 +618,7 @@ function timeOutReduction (ProSpeedReqSent, ProTimeOutSent){
         return timeAlter;
     }
 }
+/*
 function disableProjectOrCourse(projectPick) {
         for (project of projectlist) {
             for (let p in project) {
@@ -628,7 +660,7 @@ function disableProjectOrCourse(projectPick) {
                   }
             };
         };
-};
+};*/
 function operationButtons(){ //This function disables Project buttons or enable them based on requirements.
     for (let i = 0; i < projectlist.length; i++) {
         var projectPick = projectlist[i].ProjectID;
