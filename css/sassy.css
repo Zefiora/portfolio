@@ -1329,4 +1329,26 @@ p span {
   opacity: 1;
 }
 
-/*End Skill Tooltip section*//*# sourceMappingURL=sassy.css.map */
+/*End Skill Tooltip section*/
+.c1title {
+  text-align: center;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+}
+
+#aLittleAboutMe-wrapper {
+  text-align: center;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  width: 100%;
+}
+
+#aLittleAboutMe {
+  text-align: center;
+  margin-top: 2px;
+  margin-right: 10%;
+  margin-left: 10%;
+  width: 80%;
+}/*# sourceMappingURL=sassy.css.map */
