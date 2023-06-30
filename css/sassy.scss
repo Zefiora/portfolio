@@ -1249,7 +1249,35 @@ margin-top: 2px;
   background-color: black;
 }
 //end Accordion
+//end job history
 //about-me
+#aboutme-profile-wrapper {
+  border-width: 2px;
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  grid-template-rows: 100px 1fr;
+  border-color: black;
+  border-style: solid;
+  grid-gap: 3px;
+}
+.aboutmetitle {
+  text-align: center;
+  border-width: 3px;
+  border-color: #222222;
+  border-style: solid;
+  background-color: black;
+}
+#bio-aboutme-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  text-align: left;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  margin-top: 2px;
+  font-size: 12px;
+}
 #gamelinks-wrapper {
   border-width: 2px;
   border-color: black;
