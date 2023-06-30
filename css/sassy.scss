@@ -95,7 +95,7 @@ body {
   #character-profile-wrapper {
     border-width: 2px;
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 210px 1fr;
     grid-template-rows: 100px 250px;
     border-color: black;
     border-style: solid;
@@ -126,17 +126,19 @@ body {
   }
   #image-profiletext {
     display: grid;
-    grid-template-columns: 200px;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 210px;
     grid-row-end: span 2;
     font-size: 10px;
+    text-align: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
   }
   #mypic {
     border-width: 1px;
     border-color: black;
     border-style: solid;
     margin-right: 2px;
-    height: auto;
     width: 200px;
   }
   .availableattributes {
@@ -266,7 +268,6 @@ body {
   margin-top: 2px;
   grid-gap: 2px;
   width: 100%;
-  
 }
 #skilltreecontainer{
   display: grid;
@@ -1169,3 +1170,85 @@ body {
   margin-left: 10%;
   width: 80%;
 }
+#pageLinks-wrapper {
+border-width: 2px;
+border-color: black;
+border-style: solid;
+margin-top: 2px;
+}
+#pageLinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+  margin-top: 2px;
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 70%;
+  text-align: center;
+}
+.pagelink {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  padding-left: 13%;
+  padding-right: 13%;
+  padding-bottom: 13%;
+}
+//End Start index.html
+//Start job-history.html css exclusively
+#history-profile-wrapper {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  grid-template-rows: 100px 1fr;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  grid-gap: 2px;
+}
+#history-wrapper {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+}
+#workhistory-inside-wrapper {
+  margin: 2px;
+  background-color: #222222;
+}
+.historyclass {
+  border-width: 2px;
+  border-color: #222222;
+  border-style: solid;
+  margin: 1px;
+  background-color: black;
+  color: $prime_1;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.active, .historyclass:hover {
+  background-color: #3b3b3b;
+}
+.panels {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  margin: 1px;
+  padding: 0 18px;
+  background-color: #222222;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.jobhistorytitle {
+  text-align: center;
+  border-width: 3px;
+  border-color: #222222;
+  border-style: solid;
+  background-color: black;
+}
+//end Accordion

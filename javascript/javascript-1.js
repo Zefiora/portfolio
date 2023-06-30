@@ -618,49 +618,6 @@ function timeOutReduction (ProSpeedReqSent, ProTimeOutSent){
         return timeAlter;
     }
 }
-/*
-function disableProjectOrCourse(projectPick) {
-        for (project of projectlist) {
-            for (let p in project) {
-                if (p == "ProjectID") {
-                    var ProjName = project[p];
-                };
-            };
-            if (ProjName == projectPick) {
-                var x = document.getElementById("bttn-" + projectPick);
-                switch (ProjName) {
-                    case "htmlcourse":
-                        x.classList.add("dis-permanent");
-                        x.disabled = true;
-                        break;
-                    case "csscourse":
-                        x.classList.add("dis-permanent");
-                        x.disabled = true;
-                        break;
-                    case "classchangehtmlcsswizard":
-                        x.classList.add("dis-permanent");
-                        x.disabled = true;
-                        break;
-                    case "jscourse":
-                        x.classList.add("dis-permanent");
-                        x.disabled = true;
-                        break;
-                    case "classchangejavascriptwizard":
-                        x.classList.add("dis-permanent");
-                        x.disabled = true;
-                        break;
-                    case "sqlcourse":
-                        x.classList.add("dis-permanent");
-                        x.disabled = true;
-                        break;
-                    case "classchangesupremewizard":
-                        x.classList.add("dis-permanent");
-                        x.disabled = true;
-                        break;
-                  }
-            };
-        };
-};*/
 function operationButtons(){ //This function disables Project buttons or enable them based on requirements.
     for (let i = 0; i < projectlist.length; i++) {
         var projectPick = projectlist[i].ProjectID;
@@ -763,5 +720,5 @@ document.addEventListener('mousedown', function(event) {
     if (event.detail > 1) {
       event.preventDefault();
     }
-  }, false);
+}, false); 
 
