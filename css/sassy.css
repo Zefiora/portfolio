@@ -1629,4 +1629,15 @@ p span {
 .slide-in {
   opacity: 1;
   transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .pagesec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.1s, transform 0s;
+  }
 }/*# sourceMappingURL=sassy.css.map */
