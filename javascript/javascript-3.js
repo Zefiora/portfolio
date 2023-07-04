@@ -1,7 +1,7 @@
 // Write your code here
 const items = document.querySelectorAll('.pagesec')
 const options = {
-  threshold: 0.5
+  threshold: 0.1
 }
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
