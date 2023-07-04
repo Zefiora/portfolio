@@ -1284,7 +1284,7 @@ margin-top: 2px;
   border-style: solid;
   margin-top: 2px;
   text-align: center;
-  
+  width: 100%;
   }
   #gamelinks {
     display: grid;
@@ -1308,4 +1308,118 @@ margin-top: 2px;
     margin-right: 25%;
     align-self: center;
   }
+  #musiclinks-wrapper {
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    margin-top: 2px;
+    text-align: center;
+    width: 100%;
+    }
+    #musiclinks {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 1px;
+      margin-top: 2px;
+      margin-left: 25%;
+      margin-right: 25%;
+      width: 50%;
+      text-align: center;
+      border-width: 1px;
+      border-color: black;
+      border-style: solid;
+      background: rgba(0, 0, 0, 0.63)
+    }
+    #toptitlemusic {
+      background: rgba(0, 0, 0, 0.63);
+      width: 50%;
+      margin-left: 25%;
+      margin-right: 25%;
+      align-self: center;
+    }
+    #movielinks-wrapper {
+      border-width: 2px;
+      border-color: black;
+      border-style: solid;
+      margin-top: 2px;
+      text-align: center;
+      width: 100%;
+      }
+      #movielinks {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 1px;
+        margin-top: 2px;
+        margin-left: 25%;
+        margin-right: 25%;
+        width: 50%;
+        text-align: center;
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+        background: rgba(0, 0, 0, 0.63)
+      }
+      #toptitlemovie {
+        background: rgba(0, 0, 0, 0.63);
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        align-self: center;
+      }
+      #tvshowlinks-wrapper {
+        border-width: 2px;
+        border-color: black;
+        border-style: solid;
+        margin-top: 2px;
+        text-align: center;
+        width: 100%;
+        }
+        #tvshowlinks {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr;
+          grid-gap: 1px;
+          margin-top: 2px;
+          margin-left: 25%;
+          margin-right: 25%;
+          width: 50%;
+          text-align: center;
+          border-width: 1px;
+          border-color: black;
+          border-style: solid;
+          background: rgba(0, 0, 0, 0.63)
+        }
+        #toptitletvshow {
+          background: rgba(0, 0, 0, 0.63);
+          width: 50%;
+          margin-left: 25%;
+          margin-right: 25%;
+          align-self: center;
+        }
+
+.pagesec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s, transform 2s;
+}
+.pagesec > div {
+  text-align: center;
+}
+.left {
+  transform-origin: left center;
+  transform: translateX(-50%);
+}
+.right {
+  transform-origin: right center;
+  transform: translateX(50%);
+}
+.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
 //end about-me
