@@ -1189,6 +1189,9 @@ margin-top: 2px;
     padding-right: 10%;
     padding-bottom: 10%;
 }
+.alllinktext {
+  display: none;
+}
 //Start job-history.html css exclusively
 #history-profile-wrapper {
   display: grid;
@@ -1461,6 +1464,9 @@ margin-top: 2px;
        font-size: 20px !important;
        display: flex;
       }
+      .alllinktext {
+        white-space: nowrap;
+    }
   }
 }
 //end about-me

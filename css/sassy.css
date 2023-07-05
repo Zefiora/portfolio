@@ -1378,6 +1378,10 @@ p span {
   padding-bottom: 10%;
 }
 
+.alllinktext {
+  display: none;
+}
+
 #history-profile-wrapper {
   display: grid;
   grid-template-columns: 210px 1fr;
@@ -1670,6 +1674,9 @@ p span {
       width: 100% !important;
       font-size: 20px !important;
       display: flex;
+    }
+    .alllinktext {
+      white-space: nowrap;
     }
   }
 }/*# sourceMappingURL=sassy.css.map */
