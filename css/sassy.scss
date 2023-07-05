@@ -9,11 +9,11 @@ $prime_3: #191825;
 }
 body {
   background-color:black !important; 
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 *{
-  box-sizing: border-box;
-  overflow: top !important;
   padding-top: 2px;
   padding-bottom: 2px;
   padding-right: 2px;
@@ -22,7 +22,7 @@ body {
   color: $prime_1;
 }
 .new-main-wrapper {
-  width: 100%;
+
   background-color: $prime_2;
   border-width: 2px;
   border-color: black;
@@ -49,6 +49,9 @@ body {
 }
 .grid-container-2 {
   display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: 100%;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   width: 100%;
@@ -82,11 +85,13 @@ body {
   font-size: 20px;
   margin-bottom: 2px;
 }
-.navbar{
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: 100%;
   background-color:$prime_2;
-  width: 100%;
   height: 50px;
-  border-width: px25;
+  border-width: 2px;
   border-color: black;
   border-style: solid;
   color:$prime_1;
@@ -96,7 +101,16 @@ body {
     border-width: 2px;
     display: grid;
     grid-template-columns: 210px 1fr;
-    grid-template-rows: 100px 250px;
+    grid-template-rows: 100px 1fr;
+    border-color: black;
+    border-style: solid;
+    grid-gap: 3px;
+  }
+  #character-profile-wrapper2 {
+    border-width: 2px;
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    grid-template-rows: 100px 1fr;
     border-color: black;
     border-style: solid;
     grid-gap: 3px;
@@ -126,21 +140,24 @@ body {
   }
   #image-profiletext {
     display: grid;
-    grid-template-columns: 210px;
+    grid-template-columns: 100%;
     grid-row-end: span 2;
-    font-size: 10px;
+    font-size: 50%;
     text-align: center;
     border-color: black;
     border-style: solid;
     border-width: 1px;
-  }
-  #mypic {
+}
+.caption {
+    display: block;
+}
+#mypic {
     border-width: 1px;
     border-color: black;
     border-style: solid;
     margin-right: 2px;
-    width: 200px;
-  }
+    width: 100%;
+}
   .availableattributes {
     display: grid;
     grid-template-columns: 200px 50px;
@@ -343,31 +360,6 @@ body {
   }
   .dropdown-divider {
     background-color: $prime_1 !important;
-  }
-
-  @supports (display: flex) {
-    @media screen and (max-width: 800px) {
-      article {
-        display: flex;
-      }
-        .navbar {
-          width: 100%;
-          position: relative;
-          z-index: 1 !important;
-          display: flex;
-        }
-        .tbl {
-         width: 100%;
-         position: relative;
-         z-index: 0 !important;
-         display: flex;
-        }
-        .topbox {
-         width: 100% !important;
-         font-size: 20px !important;
-         display: flex;
-        }
-    }
   }
 .expwrapper {
   border-width: 2px;
@@ -1157,11 +1149,13 @@ body {
   border-style: solid;
 }
 #aLittleAboutMe-wrapper {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: 100%;
+  background-color: $prime_2;
   border-width: 1px;
   border-color: black;
   border-style: solid;
-  width: 100%;
 }
 #aLittleAboutMe {
   text-align: center;
@@ -1170,6 +1164,7 @@ body {
   margin-left: 10%;
   width: 80%;
 }
+//page links
 #pageLinks-wrapper {
 border-width: 2px;
 border-color: black;
@@ -1177,21 +1172,23 @@ border-style: solid;
 margin-top: 2px;
 }
 #pageLinks {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
-  margin-top: 2px;
-  margin-left: 30%;
-  margin-right: 30%;
-  width: 40%;
-  text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 2px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    font-size: 75%;
 }
 .pagelink {
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
 }
-//End index.html
 //Start job-history.html css exclusively
 #history-profile-wrapper {
   display: grid;
@@ -1430,6 +1427,40 @@ margin-top: 2px;
     justify-content: center;
     opacity: 1;
     transition: opacity .1s, transform 0s;
+  }
+}
+
+@supports (display: flex) {
+  @media screen and (min-width: 800px) {
+    article {
+      display: flex;
+    }
+    .navbar {
+      width: 100%;
+      z-index: 1 !important;
+      }
+      .grid-container-2 {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr;
+          width: 100%;
+          grid-gap: 2px;
+          margin-top: 2px;
+          border-width: 2px;
+          border-color: black;
+          border-style: solid;
+      }
+      .tbl {
+       width: 100%;
+       position: relative;
+       z-index: 0 !important;
+       display: flex;
+      }
+      .topbox {
+       width: 100% !important;
+       font-size: 20px !important;
+       display: flex;
+      }
   }
 }
 //end about-me

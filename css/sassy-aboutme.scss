@@ -1,0 +1,288 @@
+/*define variables for colors */
+@import url(https://fonts.googleapis.com/css?family=Play);
+$prime_1: #F6F1F1;
+$prime_2: #343152;
+$prime_3: #191825;
+
+body {
+    background-color:black !important; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+*{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    padding-left: 2px;
+    font-family: Play;
+    color: $prime_1;
+}
+.new-main-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: 100%;
+    background-color: $prime_2;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+}
+//Grid-container 2 items
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    width: 100%;
+}
+.grid-item {
+    width: auto;
+    height: auto;
+}
+.grid-container-2 {
+    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    grid-gap: 2px;
+    margin-top: 2px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+}
+.grid-item2 {
+    width: 100%;
+    height: auto;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    background-color: $prime_2;
+    color: $prime_1;
+}
+//End Grid Container 2
+//nav bar
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: 100%;
+    background-color:$prime_2;
+    height: 50px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    color:$prime_1;
+}
+p span {
+    display: block;
+}
+.dropdown-item {
+    background-color: black !important;
+    color:$prime_1;
+}
+.dropdown-menu {
+    background-color: black !important;
+}
+.dropdown-divider {
+background-color: $prime_1 !important;
+}
+//nav bar END
+// Inside New main wrapper, about me profile
+#image-profiletext {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-end: span 2;
+    font-size: 50%;
+    text-align: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+.caption {
+    display: block;
+}
+#mypic {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    margin-right: 2px;
+    width: 100%;
+}
+a {
+text-decoration : none !important;
+color:$prime_1 !important;
+}
+h4{
+text-align: center;
+}
+//page links
+#pageLinks-wrapper {
+border-width: 2px;
+border-color: black;
+border-style: solid;
+margin-top: 2px;
+}
+#pageLinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 2px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    font-size: 75%;
+}
+.pagelink {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+}
+//End page links
+//about-me
+#aboutme-profile-wrapper {
+    border-width: 2px;
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    grid-template-rows: 100px 1fr;
+    border-color: black;
+    border-style: solid;
+    grid-gap: 3px;
+}
+.aboutmetitle {
+    text-align: center;
+    border-width: 3px;
+    border-color: #222222;
+    border-style: solid;
+    background-color: black;
+}
+#bio-aboutme-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    text-align: left;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    margin-top: 2px;
+    font-size: 100%;
+}
+#alllinks-wrapper {
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    margin-top: 2px;
+    text-align: center;
+    width: 100%;
+}
+#alllinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1px;
+    margin-top: 2px;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 98%;
+    text-align: center;
+    font-size: 75%;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    background: rgba(0, 0, 0, 0.63)
+}
+#toptitle {
+    background: rgba(0, 0, 0, 0.63);
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    align-self: center;
+}
+.pagesec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s, transform 2s;
+}
+.pagesec > div {
+text-align: center;
+}
+.left {
+transform-origin: left center;
+transform: translateX(-50%);
+}
+.right {
+transform-origin: right center;
+transform: translateX(50%);
+}
+.slide-in {
+opacity: 1;
+transform: translateX(0);
+}
+@media (prefers-reduced-motion) {
+    .pagesec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        transition: opacity .1s, transform 0s;
+    }
+}
+@supports (display: flex) {
+    @media screen and (min-width: 800px) {
+        .navbar {
+        width: 100%;
+        z-index: 1 !important;
+        }
+        .grid-container-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            width: 100%;
+            grid-gap: 2px;
+            margin-top: 2px;
+            border-width: 2px;
+            border-color: black;
+            border-style: solid;
+        }
+        #alllinks-wrapper {
+            border-width: 2px;
+            border-color: black;
+            border-style: solid;
+            margin-top: 2px;
+            text-align: center;
+            width: 100%;
+        }
+        #alllinks {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-gap: 1px;
+            margin-top: 2px;
+            margin-left: 25%;
+            margin-right: 25%;
+            width: 50%;
+            text-align: center;
+            border-width: 1px;
+            border-color: black;
+            border-style: solid;
+            background: rgba(0, 0, 0, 0.63)
+        }
+        #toptitle {
+            background: rgba(0, 0, 0, 0.63);
+            width: 50%;
+            margin-left: 25%;
+            margin-right: 25%;
+            align-self: center;
+        }
+    }
+}
+//end about-me
