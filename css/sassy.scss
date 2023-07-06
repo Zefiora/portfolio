@@ -22,7 +22,6 @@ body {
   color: $prime_1;
 }
 .new-main-wrapper {
-
   background-color: $prime_2;
   border-width: 2px;
   border-color: black;
@@ -98,22 +97,24 @@ body {
 }
   /*Character title*/
   #character-profile-wrapper {
-    border-width: 2px;
-    display: grid;
-    grid-template-columns: 210px 1fr;
-    grid-template-rows: 100px 1fr;
-    border-color: black;
-    border-style: solid;
-    grid-gap: 3px;
+      border-width: 2px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      border-color: black;
+      border-style: solid;
+      grid-gap: 3px;
+      font-size: 75%;
   }
   #character-profile-wrapper2 {
-    border-width: 2px;
-    display: grid;
-    grid-template-columns: 210px 1fr;
-    grid-template-rows: 100px 1fr;
-    border-color: black;
-    border-style: solid;
-    grid-gap: 3px;
+      border-width: 2px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      border-color: black;
+      border-style: solid;
+      grid-gap: 3px;
+      font-size: 75%;
   }
   .charactername{
     display: grid;
@@ -147,6 +148,7 @@ body {
     border-color: black;
     border-style: solid;
     border-width: 1px;
+    display: none;
 }
 .caption {
     display: block;
@@ -1194,13 +1196,14 @@ margin-top: 2px;
 }
 //Start job-history.html css exclusively
 #history-profile-wrapper {
-  display: grid;
-  grid-template-columns: 210px 1fr;
-  grid-template-rows: 100px 1fr;
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  grid-gap: 2px;
+    border-width: 2px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border-color: black;
+    border-style: solid;
+    grid-gap: 3px;
+    font-size: 75%;
 }
 #history-wrapper {
   border-width: 1px;
@@ -1254,11 +1257,12 @@ margin-top: 2px;
 #aboutme-profile-wrapper {
   border-width: 2px;
   display: grid;
-  grid-template-columns: 210px 1fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   border-color: black;
   border-style: solid;
   grid-gap: 3px;
+  font-size: 75%;
 }
 .aboutmetitle {
   text-align: center;
@@ -1438,32 +1442,78 @@ margin-top: 2px;
     article {
       display: flex;
     }
-    .navbar {
+  .navbar {
+    width: 100%;
+    z-index: 1 !important;
+  }
+  .grid-container-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
       width: 100%;
-      z-index: 1 !important;
-      }
-      .grid-container-2 {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-template-rows: 1fr;
-          width: 100%;
-          grid-gap: 2px;
-          margin-top: 2px;
-          border-width: 2px;
-          border-color: black;
-          border-style: solid;
-      }
-      .tbl {
-       width: 100%;
-       position: relative;
-       z-index: 0 !important;
-       display: flex;
-      }
-      .topbox {
-       width: 100% !important;
-       font-size: 20px !important;
-       display: flex;
-      }
+      grid-gap: 2px;
+      margin-top: 2px;
+      border-width: 2px;
+      border-color: black;
+      border-style: solid;
+  }
+  .tbl {
+    width: 100%;
+    position: relative;
+    z-index: 0 !important;
+    display: flex;
+  }
+  .topbox {
+    width: 100% !important;
+    font-size: 20px !important;
+    display: flex;
+  }
+  #image-profiletext {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-end: span 2;
+    font-size: 70%;
+    text-align: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+  }
+    #aboutme-profile-wrapper {
+      border-width: 2px;
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      grid-template-rows: 100px 1fr;
+      border-color: black;
+      border-style: solid;
+      grid-gap: 3px;
+  }
+  #character-profile-wrapper {
+    border-width: 2px;
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    grid-template-rows: 100px 1fr;
+    border-color: black;
+    border-style: solid;
+    grid-gap: 3px;
+    }
+    #character-profile-wrapper2 {
+        border-width: 2px;
+        display: grid;
+        grid-template-columns: 210px 1fr;
+        grid-template-rows: 100px 1fr;
+        border-color: black;
+        border-style: solid;
+        grid-gap: 3px;
+    }
+    #history-profile-wrapper {
+      border-width: 2px;
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      grid-template-rows: 100px 1fr;
+      border-color: black;
+      border-style: solid;
+      grid-gap: 3px;
+    }
       .alllinktext {
         display: block;
     }

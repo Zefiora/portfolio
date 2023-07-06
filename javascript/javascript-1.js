@@ -66,7 +66,7 @@ function mouseClick(element) {
         else {
         document.getElementById("availableattrpoints").innerText -= 1;
         element.getElementsByClassName("attrvalue")[0].innerText -= -1;
-        statallo()
+        statallo();
         clearSelection(); 
     }
 }
@@ -81,11 +81,11 @@ function myFunction() {
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 6000);
     }
 }
-  function myFunction3() {
+function myFunction3() {
     var x = document.getElementById("snackbar3");
     x.className = "show";
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-  } 
+} 
 function expbarprogress() {
     var r = document.querySelector(':root');//Put css variable in js varable
     if (document.getElementById("level").innerText == 50) {
@@ -246,7 +246,7 @@ function learnaskill(skillid) {
                                                                 document.getElementById("skills4").setAttribute("class", "sql2");
                                                             }
                                                             learnedSkills.push(pickskill);
-                                                            statallo()
+                                                            statallo();
                                                             break;
                                                         } else {
                                                             document.getElementById("snackbar4").innerHTML = "Complete the Required Course/Project - [" + skilllist[i].requiredProject + "]";
@@ -358,7 +358,7 @@ function classchangewizard() {
                                                             document.getElementById("class-stat-id").innerText = wizardlist[i].wizname;
                                                             document.getElementById("class-stat-id").setAttribute("class", wizardlist[i].wizid);
                                                             classchangedlist.push(wizardlist[i].wizid); //Javascript Course not working now..
-                                                            statallo()
+                                                            statallo();
                                                             let pickclass = document.getElementById("matthewclass").className 
                                                                 if (pickclass == "supremewizard") {
                                                                     document.getElementById("classchange").innerText = "Final Class Reached!";
@@ -664,16 +664,6 @@ function hasCompletedProject(reqProject){
         }
     }
 }
-this.ProjectName = ProjectName;
-this.ProjectID = ProjectID;
-this.ClassReq = ClassReq;
-this.Expgranted = Expgranted;
-this.SkillReq = SkillReq;
-this.LVLReq = LVLReq;
-this.PowerReq = PowerReq;
-this.SpeedReq = SpeedReq;
-this.AccReq = AccReq;
-this.TimetoComplete = TimetoComplete;
 function projectButtonToolTip(sk){
     for (project of projectlist) {
         let txt = "";

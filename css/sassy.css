@@ -107,21 +107,23 @@ body {
 #character-profile-wrapper {
   border-width: 2px;
   display: grid;
-  grid-template-columns: 210px 1fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   border-color: black;
   border-style: solid;
   grid-gap: 3px;
+  font-size: 75%;
 }
 
 #character-profile-wrapper2 {
   border-width: 2px;
   display: grid;
-  grid-template-columns: 210px 1fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   border-color: black;
   border-style: solid;
   grid-gap: 3px;
+  font-size: 75%;
 }
 
 .charactername {
@@ -160,6 +162,7 @@ body {
   border-color: black;
   border-style: solid;
   border-width: 1px;
+  display: none;
 }
 
 .caption {
@@ -1383,13 +1386,14 @@ p span {
 }
 
 #history-profile-wrapper {
+  border-width: 2px;
   display: grid;
-  grid-template-columns: 210px 1fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   border-color: black;
   border-style: solid;
-  border-width: 1px;
-  grid-gap: 2px;
+  grid-gap: 3px;
+  font-size: 75%;
 }
 
 #history-wrapper {
@@ -1447,11 +1451,12 @@ p span {
 #aboutme-profile-wrapper {
   border-width: 2px;
   display: grid;
-  grid-template-columns: 210px 1fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   border-color: black;
   border-style: solid;
   grid-gap: 3px;
+  font-size: 75%;
 }
 
 .aboutmetitle {
@@ -1674,6 +1679,52 @@ p span {
       width: 100% !important;
       font-size: 20px !important;
       display: flex;
+    }
+    #image-profiletext {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-row-end: span 2;
+      font-size: 70%;
+      text-align: center;
+      border-color: black;
+      border-style: solid;
+      border-width: 1px;
+    }
+    #aboutme-profile-wrapper {
+      border-width: 2px;
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      grid-template-rows: 100px 1fr;
+      border-color: black;
+      border-style: solid;
+      grid-gap: 3px;
+    }
+    #character-profile-wrapper {
+      border-width: 2px;
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      grid-template-rows: 100px 1fr;
+      border-color: black;
+      border-style: solid;
+      grid-gap: 3px;
+    }
+    #character-profile-wrapper2 {
+      border-width: 2px;
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      grid-template-rows: 100px 1fr;
+      border-color: black;
+      border-style: solid;
+      grid-gap: 3px;
+    }
+    #history-profile-wrapper {
+      border-width: 2px;
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      grid-template-rows: 100px 1fr;
+      border-color: black;
+      border-style: solid;
+      grid-gap: 3px;
     }
     .alllinktext {
       display: block;
