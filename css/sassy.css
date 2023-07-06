@@ -1676,7 +1676,7 @@ p span {
       display: flex;
     }
     .alllinktext {
-      white-space: nowrap;
+      display: block;
     }
   }
 }/*# sourceMappingURL=sassy.css.map */

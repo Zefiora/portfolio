@@ -358,7 +358,7 @@ h4 {
       border-width: 1px;
     }
     .alllinktext {
-      white-space: nowrap;
+      display: block;
     }
   }
 }/*# sourceMappingURL=sassy-aboutme.css.map */
