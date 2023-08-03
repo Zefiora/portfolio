@@ -493,18 +493,19 @@
       <br>
       <h3>Contact Me</h3>
       <br>
-      <form  action="/save_data" target="_blank" method="get">
+      <form name="contact-form" action="/save_data" onsubmit="return validateForm()" method="post">
         <label for="ffname">First Name:</label><br>
-        <input type="text" id="ffname" name="ffname" size="25" style="color:black">
+        <input type="text" id="ffname" name="ffname" size="25" pattern="^[A-Za-z]+$" minlength="3" placeholder="Matthew" style="color:black">
         <br>
         <label for="flname">Last Name:</label><br>
-        <input type="text" id="flname" name="flname" size="25" style="color:black">
+        <input type="text" id="flname" name="flname" size="25" pattern="^[A-Za-z]+$" minlength="3" placeholder="Barnes" style="color:black">
         <br>
         <label for="fphone">Phone Number:</label><br>
-        <input type="text" id="fphone" name="fphone" size="25" style="color:black">
+        <input type="text" id="fphone" name="fphone" title="Enter Phone Number, Include area code and no dashes" minlength="10"  maxlength="10" size="25" placeholder="1234567890"
+        pattern="[0-9]{3}[0-9]{3}[0-9]{4}" style="color:black">
         <br> 
         <label for="femail">Email Address:</label><br>
-        <input type="text" id="femail" name="femail" size="25" style="color:black">
+        <input type="email" id="femail" name="femail" size="25" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Enter Email Address" style="color:black">
         <br><br>
         <label for="fproj">Job Interest: </label>
         <select name="fproj" id="fproj" style="color:black">
@@ -563,5 +564,6 @@
 </div><!--new-mainwrapper end div-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="javascript\javascript-1.js"></script>
+<script src="javascript\javascript-4.js"></script>
 </body>
 </html>

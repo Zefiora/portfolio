@@ -93,80 +93,82 @@
           </div>
     
         </div><!--End Page Links Container-->
-  <div class="grid-container-2">
-    <div class="grid-item2">
-      <br>
-      <h3>Contact Me</h3>
-      <br>
-      <form  action="/save_data" target="_blank" method="get">
-        <label for="ffname">First Name:</label><br>
-        <input type="text" id="ffname" name="ffname" size="25" style="color:black">
-        <br>
-        <label for="flname">Last Name:</label><br>
-        <input type="text" id="flname" name="flname" size="25" style="color:black">
-        <br>
-        <label for="fphone">Phone Number:</label><br>
-        <input type="text" id="fphone" name="fphone" size="25" style="color:black">
-        <br> 
-        <label for="femail">Email Address:</label><br>
-        <input type="text" id="femail" name="femail" size="25" style="color:black">
-        <br><br>
-        <label for="fproj">Job Interest: </label>
-        <select name="fproj" id="fproj" style="color:black">
-          <option value="Excel">Excel</option>
-          <option value="Website">Website</option>
-          <option value="SQL">SQL</option>
-          <option value="Other">Other or Unsure</option>
-        </select>
-        <br>
-        <br>
-        <input type="submit" value="Submit" style="color:black">
-      </form>
-    </div>
-    <div class="grid-item2">
-          <br>
-          <h2>Developer Tools</h2><br><br>
-          <div class="grid-container">
-            <div class="grid-item">
-              <a href="https://imagemap.org/" target="_blank" style="color:#F6F1F1">
-              <img src="https://imagemap.org/img/imgmap-x-small.png" width=50%></a>
-            </div>
-            <div class="grid-item">
-              <a href="https://www.w3schools.com/" target="_blank" style="color:#F6F1F1">
-                <img src="https://www.w3schools.com/favicon.ico" width=90%></a>
-            </div>
-            <div class="grid-item">
-              <a href="https://training.correlation-one.com/" target="_blank" >
-                <img src="https://training.correlation-one.com/favicon.ico" width=90%></a>
-            </div>
-            <div class="grid-item">
-              <a href="https://codepen.io/Zefiora63/pen/XWxKBLr?editors=1100" target="_blank">
-                <img src="https://codepen.io/favicon.ico" width=65%></a>
-            </div>
-            <div class="grid-item">
-              <a href="https://colorhunt.co/" target="_blank" >
-                <img src="https://colorhunt.co/img/color-hunt-icon-ios.png" width=40%></a>
-            </div>
-            <div class="grid-item">
-              <a href="https://www.toptal.com/designers/htmlarrows/symbols/" target="_blank">
-                <img src="https://www.toptal.com/designers/htmlarrows/assets/images/favicon.ico" width=90%></a>
-            </div>
-          </div><!--grid-container closing div-->
-    </div> <!-- grid-item2 closing div-->
-    <div class="grid-item2">          
-      <br>
-      <h2>Profile Links</h2><br>
-      <a href="https:/docs/assets/.google.com/document/d/1kCKRT-SVS099PuQcV2P1gJUxqBnm1PZb/edit?usp=share_link&ouid=103031430459850278951&rtpof=true&sd=true">Resume</a>
-      <a href="https://www.linkedin.com/in/zefiora/">LinkedIN</a>
-      <br><br><br><br>
-      <h2>Contact Information</h2><br>
-      Discord: Zefiora#4530<br><br>
-      Author: Matthew Barnes<br><br>
-      <a href="mailto:sakume@rocketmail.com" style="color:#F6F1F1">Sakume@Rocketmail.com</a>
-    </div>
-  </div> 
+        <div class="grid-container-2">
+          <div class="grid-item2">
+            <br>
+            <h3>Contact Me</h3>
+            <br>
+            <form name="contact-form" action="/save_data" onsubmit="return validateForm()" method="post">
+              <label for="ffname">First Name:</label><br>
+              <input type="text" id="ffname" name="ffname" size="25" pattern="^[A-Za-z]+$" minlength="3" placeholder="Matthew" style="color:black">
+              <br>
+              <label for="flname">Last Name:</label><br>
+              <input type="text" id="flname" name="flname" size="25" pattern="^[A-Za-z]+$" minlength="3" placeholder="Barnes" style="color:black">
+              <br>
+              <label for="fphone">Phone Number:</label><br>
+              <input type="text" id="fphone" name="fphone" title="Enter Phone Number, Include area code and no dashes" minlength="10"  maxlength="10" size="25" placeholder="1234567890"
+              pattern="[0-9]{3}[0-9]{3}[0-9]{4}" style="color:black">
+              <br> 
+              <label for="femail">Email Address:</label><br>
+              <input type="email" id="femail" name="femail" size="25" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Enter Email Address" style="color:black">
+              <br><br>
+              <label for="fproj">Job Interest: </label>
+              <select name="fproj" id="fproj" style="color:black">
+                <option value="Excel">Excel</option>
+                <option value="Website">Website</option>
+                <option value="SQL">SQL</option>
+                <option value="Other">Other or Unsure</option>
+              </select>
+              <br>
+              <br>
+              <input type="submit" value="Submit" style="color:black">
+            </form>
+          </div>
+          <div class="grid-item2">
+                <br>
+                <h2>Developer Tools</h2><br><br>
+                <div class="grid-container">
+                  <div class="grid-item">
+                    <a href="https://imagemap.org/" target="_blank" style="color:#F6F1F1">
+                    <img src="https://imagemap.org/img/imgmap-x-small.png" width=50%></a>
+                  </div>
+                  <div class="grid-item">
+                    <a href="https://www.w3schools.com/" target="_blank" style="color:#F6F1F1">
+                      <img src="https://www.w3schools.com/favicon.ico" width=90%></a>
+                  </div>
+                  <div class="grid-item">
+                    <a href="https://training.correlation-one.com/" target="_blank" >
+                      <img src="https://training.correlation-one.com/favicon.ico" width=90%></a>
+                  </div>
+                  <div class="grid-item">
+                    <a href="https://codepen.io/Zefiora63/pen/XWxKBLr?editors=1100" target="_blank">
+                      <img src="https://codepen.io/favicon.ico" width=65%></a>
+                  </div>
+                  <div class="grid-item">
+                    <a href="https://colorhunt.co/" target="_blank" >
+                      <img src="https://colorhunt.co/img/color-hunt-icon-ios.png" width=40%></a>
+                  </div>
+                  <div class="grid-item">
+                    <a href="https://www.toptal.com/designers/htmlarrows/symbols/" target="_blank">
+                      <img src="https://www.toptal.com/designers/htmlarrows/assets/images/favicon.ico" width=90%></a>
+                  </div>
+                </div><!--grid-container closing div-->
+          </div> <!-- grid-item2 closing div-->
+          <div class="grid-item2">          
+            <br>
+            <h2>Profile Links</h2><br>
+            <a href="https:/docs/assets/.google.com/document/d/1kCKRT-SVS099PuQcV2P1gJUxqBnm1PZb/edit?usp=share_link&ouid=103031430459850278951&rtpof=true&sd=true">Resume</a>
+            <a href="https://www.linkedin.com/in/zefiora/">LinkedIN</a>
+            <br><br><br><br>
+            <h2>Contact Information</h2><br>
+            Discord: Zefiora#4530<br><br>
+            Author: Matthew Barnes<br><br>
+            <a href="mailto:sakume@rocketmail.com" style="color:#F6F1F1">Sakume@Rocketmail.com</a>
+          </div>
+        </div> 
 </div><!--new-mainwrapper end div-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="javascript\javascript-1.js"></script>
+<script src="javascript\javascript-4.js"></script>
 </body>
 </html>
