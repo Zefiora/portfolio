@@ -18,6 +18,7 @@ function arryvalidation() {
     let text;
     let i;
     let arryz;
+    
     arryz = x.split(',');
     arryz = arryz.sort(function(a, b) {
         return a - b;
@@ -39,4 +40,5 @@ function arryvalidation() {
               };
         };
         alert(text);
+        document.getElementById("submit").preventDefault();
     }
