@@ -71,4 +71,13 @@
 .slide-in {
   opacity: 1;
   transform: translateX(0);
+}
+
+#newSubmit {
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  width: 70px;
+  height: 30px;
+  color: black;
 }/*# sourceMappingURL=sassy-portfolio.css.map */

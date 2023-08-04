@@ -15,6 +15,7 @@ items.forEach(item => {
 
 function arryvalidation() {
     let x = document.getElementById("textarry").value;
+    let form = document.getElementById("arryform");
     let text;
     let i;
     let arryz;
@@ -39,6 +40,12 @@ function arryvalidation() {
                 text += "\n" + i;
               };
         };
+        localStorage.setItem("storedarryz", arryz);
+        text = localStorage.getItem("storedarryz")
         alert(text);
-        document.getElementById("submit").preventDefault();
+
+        //form.submit();
+        //alert("Data stored in database!");
+        //document.getElementById("submit").preventDefault();
+
     }
