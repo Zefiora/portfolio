@@ -87,7 +87,7 @@ p span {
     background-color: black !important;
 }
 .dropdown-divider {
-background-color: $prime_1 !important;
+    background-color: $prime_1 !important;
 }
 //nav bar END
 // Inside New main wrapper, about me profile
@@ -113,18 +113,18 @@ background-color: $prime_1 !important;
     width: 100%;
 }
 a {
-text-decoration : none !important;
-color:$prime_1 !important;
+    text-decoration : none !important;
+    color:$prime_1 !important;
 }
 h4{
-text-align: center;
+    text-align: center;
 }
 //page links
 #pageLinks-wrapper {
-border-width: 2px;
-border-color: black;
-border-style: solid;
-margin-top: 2px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    margin-top: 2px;
 }
 #pageLinks {
     display: grid;

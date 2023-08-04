@@ -50,6 +50,18 @@ body {
   height: auto;
 }
 
+* option {
+  background-color: black;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 2px solid black;
+}
+
 .grid-container-2 {
   display: grid;
   display: flex;

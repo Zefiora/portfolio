@@ -1,0 +1,74 @@
+.new-main-wrapper2 {
+  background-color: #343152;
+  height: 100%;
+  width: 100%;
+}
+
+#header {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+#bg-containter {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: rgb(43, 43, 43);
+  width: 100%;
+  height: 400px;
+  display: flex;
+}
+
+#inputArry {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  text-align: center;
+  overflow: hidden;
+  width: 33.3%;
+  margin: auto;
+  position: relative;
+  align-content: center;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: rgb(27, 27, 27);
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#textarry {
+  width: 75%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+* input {
+  color: black !important;
+}
+
+.pagesec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s, transform 2s;
+}
+
+.pagesec > div {
+  text-align: center;
+}
+
+.left {
+  transform-origin: left center;
+  transform: translateX(-190%);
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}/*# sourceMappingURL=sassy-portfolio.css.map */
