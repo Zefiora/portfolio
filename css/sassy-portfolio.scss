@@ -13,14 +13,15 @@ $prime_3: #191825;
     text-align: center;
     margin-bottom: 2px;
 }
-#bg-containter{
+#bg-containter {
     border-style: solid;
     border-width: 2px;
     border-color: black;
     background-color: rgb(43, 43, 43);
     width: 100%;
-    height: 400px;
+    height: 100%;
     display: flex;
+    align-content: center;
 }
 #inputArry{
     display: grid;
@@ -38,6 +39,29 @@ $prime_3: #191825;
     background-color: rgb(27, 27, 27);
     padding-top: 2%;
     padding-bottom: 2%;
+}
+#bar-chart-container {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: rgb(43, 43, 43);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center; 
+}
+#bar-chart{
+    text-align: center;
+    overflow: hidden;
+    width: 33.3%;
+    margin: auto;
+    position: relative;
+    align-content: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: rgb(27, 27, 27);
+    padding-top: 2%;
 }
 #textarry{
     width: 75%;

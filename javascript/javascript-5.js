@@ -12,10 +12,59 @@ const observer = new IntersectionObserver(entries => {
 items.forEach(item => {
   observer.observe(item);
 })
+  function d3arry () {
+  console.log("Learning D3 Section")
+    let d3arrys = localStorage.getItem("storedarryz").split(',');
+    var width = 600, height = 500;
 
+    console.log(typeof d3arrys);
+    console.log(d3arrys);
+
+  //  d3.select(".d3_arry")
+  //    .selectAll("p")
+  //    .data(d3arrys)
+  //    .join("p")
+  //    .attr("class", "d3_arry")
+  //    .text((d) => d)
+
+   const barChartData = d3arrys
+   
+   var scale = d3.scaleLinear()
+    .domain([d3.min(barChartData), d3.max(barChartData)])
+    .range([height, 0]);
+
+   const barChartSVG = d3
+     .select("#bar-chart")
+     .append("svg")
+     .attr("width", width)
+     .attr("height", height)
+
+   barChartSVG.selectAll("rect")
+     .data(barChartData)
+     .enter()
+     .append("rect")
+     .attr("x", function(d, i) {
+           return i * 45
+     })
+     .attr("y", function(d) {
+           return 400 - d
+     })
+      .attr("width", 40)
+      .attr("height", function(d) {
+            return d
+      })
+     .attr("fill", "red")
+     .attr("transform", "translate(50, 95)")
+
+    var y_axis = d3.axisLeft()
+      .scale(scale);
+
+    barChartSVG.append("g")
+      .attr("transform", "translate(50, 5)")
+      .call(y_axis);
+  };
 function arryvalidation() {
     let x = document.getElementById("textarry").value;
-    let form = document.getElementById("arryform");
     let text;
     let i;
     let arryz;
@@ -42,10 +91,6 @@ function arryvalidation() {
         };
         localStorage.setItem("storedarryz", arryz);
         text = localStorage.getItem("storedarryz")
-        alert(text);
-
-        //form.submit();
-        //alert("Data stored in database!");
-        //document.getElementById("submit").preventDefault();
-
+        document.getElementById("output-arry").innerHTML = text;
+        d3arry();
     }
