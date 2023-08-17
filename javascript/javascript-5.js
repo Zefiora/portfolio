@@ -20,13 +20,6 @@ items.forEach(item => {
     console.log(typeof d3arrys);
     console.log(d3arrys);
 
-  //  d3.select(".d3_arry")
-  //    .selectAll("p")
-  //    .data(d3arrys)
-  //    .join("p")
-  //    .attr("class", "d3_arry")
-  //    .text((d) => d)
-
    const barChartData = d3arrys
    
    var scale = d3.scaleLinear()

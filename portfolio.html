@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, Matthew Aaron Barnes, Matthew Barnes, Professional, Web Dev, Web developer, Professional Web developer, Hire a web developer, Developer Tools, HTML/CSS, HTML web dev, Zefiora, Zefiora#4530, sakume, Excel VBA, Photoshop, Indesign, Python, coding, Zefiora web dev">
-  <title>Matthew Aaron Barnes - Skills</title>
+  <title>Matthew Aaron Barnes - Portfolio</title>
   <link rel="stylesheet" href="css/sassy.css">
   <link rel="stylesheet" href="css/sassy-portfolio.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+  integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+  integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+  crossorigin=""></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet"> 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -62,21 +68,60 @@
     </p>
   </div>
   <div id="bg-containter">
-    <div id="inputArry" class="pagesec left">
-      <!--<form name="arryform" action="" method="">-->
-        <label for="textarry">Enter 10 more random comma separated numbers, and click submit to see them sorted numerically smallest to largest.</label>
-        <span>
-          <input type="array" placeholder="10,25,12,14,15,20,15,83,95,100" id="textarry" name="textarry">
-          <!--<input type="submit" value="Submit">-->
-          <button id="newSubmit" onclick="return arryvalidation()">Submit</button>
-        </span>
+    <h1>Sort Array</h1>
+      <div id="inputArry" class="pagesec left">
+        <!--<form name="arryform" action="" method="">-->
+          <label for="textarry">Enter 10 more random comma separated numbers, and click submit to see them sorted numerically smallest to largest.</label>
+          <span>
+            <input type="array" placeholder="10,25,12,14,15,20,15,83,95,100" id="textarry" name="textarry">
+            <!--<input type="submit" value="Submit">-->
+            <button id="newSubmit" onclick="return arryvalidation()">Submit</button>
+          </span>
       <!--</form>-->
       <div id="output-arry"></div>
     </div>
   </div>
   <div id="bar-chart-container" class="pagesec">
+    <h1>Bar Chart Output</h1>
     <div id="bar-chart"></div>
   </div>
+  <!--Project 14, adding a map with Leaflit-->
+  <div id="map-container">
+    <span>
+      <h1>Leaflet Map</h1>
+      <div id="map" style="width: 600px; height: 400px;" style="color: black;"></div>
+    </span>
+  </div>
+    <script>
+      const map = L.map('map').setView([34.69563809916869,
+          -92.20602470796001],
+          15);
+      var marker = L.marker([34.69563809916869, -92.20602470796001]).addTo(map);
+
+      var circle = L.circle([34.69563809916869, -92.20602470796001], {radius: 600}).addTo(map);
+
+      var popup = L.popup()
+           .setLatLng([34.7, -92.2])
+           .setContent("Amazon LIT1 Fulfilment Center")
+           .openOn(map);
+
+      var latlngs = [
+      [34.70, -92.207],
+      [34.72, -92.24],
+      [34.71, -92.26]];
+
+      var polygon = L.polygon(latlngs, {color: 'orange', fillOpacity: 0.5, weight: 3}).addTo(map);
+
+      map.fitBounds(polygon.getBounds());
+
+      const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+
+      circle.bindPopup("<b>Amazon LIT1 Fulfilment Center</b>");
+      polygon.bindPopup("I only live 15-20mins from the FC.");
+  </script>
 <!--Footers--------------------------------------------------->
   <div id="pageLinks-wrapper"><!--Main Container for Page Links-->
       <div id="pageLinks">
